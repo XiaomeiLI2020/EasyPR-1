@@ -14,6 +14,7 @@ CPlateDetect::CPlateDetect()
 
 void CPlateDetect::LoadSVM(string s)
 {
+    
 	m_plateJudge->LoadModel(s.c_str());
 }
 
