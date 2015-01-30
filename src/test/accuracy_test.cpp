@@ -21,7 +21,7 @@ int acurayTest(const string& test_path)
 	pr.LoadSVM("model/svm.xml");
 	pr.setLifemode(true);
 
-	int size = files.size();
+	int size = (int)files.size();
 	//int size = 200;
 
 	if (0 == size)

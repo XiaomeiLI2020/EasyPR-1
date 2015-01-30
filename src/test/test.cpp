@@ -115,7 +115,7 @@ int test_plate_locate()
 {
 	cout << "test_plate_locate" << endl;
 
-	Mat src = imread("image/plate_locate.jpg");
+	Mat src = imread("/Users/zhoushiwei/Dropbox/EasyPR/image/plate_locate.jpg");
 
 	vector<Mat> resultVec;
 	CPlateLocate plate;
@@ -141,7 +141,7 @@ int test_plate_judge()
 {
 	cout << "test_plate_judge" << endl;
 
-	Mat src = imread("image/plate_judge.jpg");
+	Mat src = imread("/Users/zhoushiwei/Dropbox/EasyPR/image/plate_judge.jpg");
 
 	//可能是车牌的图块集合
 	vector<Mat> matVec;
@@ -195,7 +195,7 @@ int test_chars_segment()
 {
 	cout << "test_chars_segment" << endl;
 
-	Mat src = imread("image/chars_segment.jpg");
+	Mat src = imread("/Users/zhoushiwei/Dropbox/EasyPR/image/chars_segment.jpg");
 
 	vector<Mat> resultVec;
 	CCharsSegment plate;
@@ -219,7 +219,7 @@ int test_chars_identify()
 {
 	cout << "test_chars_identify" << endl;
 
-	Mat src = imread("image/chars_identify.jpg");
+	Mat src = imread("/Users/zhoushiwei/Dropbox/EasyPR/image/chars_identify.jpg");
 
 	vector<Mat> resultVec;
 	CCharsSegment cs;
@@ -270,7 +270,7 @@ int test_plate_detect()
 	cout << "test_plate_detect" << endl;
 
 	//Mat src = imread("image/plate_detect.jpg");
-	Mat src = imread("image/baidu_image/test1.jpg");
+	Mat src = imread("/Users/zhoushiwei/Dropbox/EasyPR/image/baidu_image/test1.jpg");
 
 	vector<Mat> resultVec;
 	CPlateDetect pd;
@@ -296,7 +296,7 @@ int test_chars_recognise()
 {
 	cout << "test_chars_recognise" << endl;
 
-	Mat src = imread("image/chars_recognise.jpg");
+	Mat src = imread("/Users/zhoushiwei/Dropbox/EasyPR/image/chars_recognise.jpg");
 
 	CCharsRecognise cr;
 	string charsRecognise = "";
@@ -319,7 +319,7 @@ int test_plate_recognize()
 	cout << "test_plate_recognize" << endl;
 
 	//Mat src = imread("image/plate_locate.jpg");
-	Mat src = imread("image/test.jpg");
+	Mat src = imread("/Users/zhoushiwei/Dropbox/EasyPR/image/test.jpg");
 
 	CPlateRecognize pr;
 	pr.LoadANN("model/ann.xml");

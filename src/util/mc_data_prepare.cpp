@@ -194,7 +194,7 @@ void getLearnData()
 	vector<string> files;
 	getFiles(filePath, files );
 
-	int size = files.size();
+	int size = (int)files.size();
 	if (0 == size)
 		cout << "No File Found in rawdata!" << endl;
 
