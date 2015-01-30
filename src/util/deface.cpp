@@ -36,7 +36,7 @@ int deface()
 { 
     CascadeClassifier cascade;
     //string cascadeName="/Users/zhoushiwei/Dropbox/Avatar/SDMLIB/haarcascade_frontalface_alt2.xml";
-	string cascadeName="model/haarcascade_frontalface_default.xml";
+	string cascadeName="/Users/zhoushiwei/Dropbox/EasyPR/model/haarcascade_frontalface_default.xml";
 
     if( !cascade.load( cascadeName ) )
     {

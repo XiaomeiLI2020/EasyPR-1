@@ -31,7 +31,7 @@ CCharsIdentify::CCharsIdentify()
 {
 	//cout << "CCharsIdentify" << endl;
 	m_predictSize = 10;
-	m_path = "model/ann.xml";
+	m_path = "/Users/zhoushiwei/Dropbox/EasyPR/model/ann.xml";
 	LoadModel();
 
 	if (m_map.empty())

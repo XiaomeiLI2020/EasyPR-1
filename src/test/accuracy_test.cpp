@@ -17,8 +17,8 @@ int acurayTest(const string& test_path)
 	CPlateJudge ju;
 	CPlateRecognize pr;
 
-	pr.LoadANN("model/ann.xml");
-	pr.LoadSVM("model/svm.xml");
+	pr.LoadANN("/Users/zhoushiwei/Dropbox/EasyPR/model/ann.xml");
+	pr.LoadSVM("/Users/zhoushiwei/Dropbox/EasyPR/model/svm.xml");
 	pr.setLifemode(true);
 
 	int size = (int)files.size();

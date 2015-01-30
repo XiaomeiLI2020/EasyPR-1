@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53CB66C41A7BEE97007B7FEB /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66C31A7BEE97007B7FEB /* test.cpp */; };
 		53EBCD251A7B58CF002F67C1 /* chars_identify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD041A7B58CF002F67C1 /* chars_identify.cpp */; };
 		53EBCD261A7B58CF002F67C1 /* chars_recognise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD051A7B58CF002F67C1 /* chars_recognise.cpp */; };
 		53EBCD271A7B58CF002F67C1 /* chars_segment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD061A7B58CF002F67C1 /* chars_segment.cpp */; };
@@ -17,7 +18,6 @@
 		53EBCD2C1A7B58CF002F67C1 /* plate_recognize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD0B1A7B58CF002F67C1 /* plate_recognize.cpp */; };
 		53EBCD2D1A7B58CF002F67C1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD171A7B58CF002F67C1 /* main.cpp */; };
 		53EBCD2E1A7B58CF002F67C1 /* accuracy_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD191A7B58CF002F67C1 /* accuracy_test.cpp */; };
-		53EBCD2F1A7B58CF002F67C1 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1A1A7B58CF002F67C1 /* test.cpp */; };
 		53EBCD301A7B58CF002F67C1 /* ann_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1C1A7B58CF002F67C1 /* ann_train.cpp */; };
 		53EBCD311A7B58CF002F67C1 /* svm_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1D1A7B58CF002F67C1 /* svm_train.cpp */; };
 		53EBCD321A7B58CF002F67C1 /* deface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1F1A7B58CF002F67C1 /* deface.cpp */; };
@@ -58,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		53CB66C31A7BEE97007B7FEB /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 		53E6E8CF1A7748F80044931C /* EasyPR */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyPR; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EBCD041A7B58CF002F67C1 /* chars_identify.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = chars_identify.cpp; sourceTree = "<group>"; };
 		53EBCD051A7B58CF002F67C1 /* chars_recognise.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = chars_recognise.cpp; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		53EBCD161A7B58CF002F67C1 /* util.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		53EBCD171A7B58CF002F67C1 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		53EBCD191A7B58CF002F67C1 /* accuracy_test.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = accuracy_test.cpp; sourceTree = "<group>"; };
-		53EBCD1A1A7B58CF002F67C1 /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 		53EBCD1C1A7B58CF002F67C1 /* ann_train.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = ann_train.cpp; sourceTree = "<group>"; };
 		53EBCD1D1A7B58CF002F67C1 /* svm_train.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = svm_train.cpp; sourceTree = "<group>"; };
 		53EBCD1F1A7B58CF002F67C1 /* deface.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = deface.cpp; sourceTree = "<group>"; };
@@ -208,8 +208,8 @@
 		53EBCD181A7B58CF002F67C1 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				53CB66C31A7BEE97007B7FEB /* test.cpp */,
 				53EBCD191A7B58CF002F67C1 /* accuracy_test.cpp */,
-				53EBCD1A1A7B58CF002F67C1 /* test.cpp */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -325,12 +325,12 @@
 				53EBCD361A7B58CF002F67C1 /* mc_data_prepare.cpp in Sources */,
 				53EBCD2A1A7B58CF002F67C1 /* plate_judge.cpp in Sources */,
 				53EBCD2E1A7B58CF002F67C1 /* accuracy_test.cpp in Sources */,
-				53EBCD2F1A7B58CF002F67C1 /* test.cpp in Sources */,
 				53EBCD2B1A7B58CF002F67C1 /* plate_locate.cpp in Sources */,
 				53EBCD271A7B58CF002F67C1 /* chars_segment.cpp in Sources */,
 				53EBCD301A7B58CF002F67C1 /* ann_train.cpp in Sources */,
 				53EBCD331A7B58CF002F67C1 /* general_test_prepare.cpp in Sources */,
 				53EBCD371A7B58CF002F67C1 /* util.cpp in Sources */,
+				53CB66C41A7BEE97007B7FEB /* test.cpp in Sources */,
 				53EBCD251A7B58CF002F67C1 /* chars_identify.cpp in Sources */,
 				53EBCD311A7B58CF002F67C1 /* svm_train.cpp in Sources */,
 				53EBCD261A7B58CF002F67C1 /* chars_recognise.cpp in Sources */,

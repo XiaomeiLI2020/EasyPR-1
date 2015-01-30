@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/test/test.cpp"
-            timestampString = "444239875.542133"
+            timestampString = "444329635.162522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "test_plate_locate()"
+            startingLineNumber = "469"
+            endingLineNumber = "469"
+            landmarkName = "test_plate_recognize()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/test/test.cpp"
-            timestampString = "444239893.742818"
+            timestampString = "444329635.162522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "testMain()"
+            startingLineNumber = "409"
+            endingLineNumber = "409"
+            landmarkName = "test_plate_recognize()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

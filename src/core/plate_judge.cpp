@@ -9,7 +9,7 @@ namespace easypr{
 CPlateJudge::CPlateJudge()
 {
 	//cout << "CPlateJudge" << endl;
-	m_path = "model/svm.xml";
+	m_path = "/Users/zhoushiwei/Dropbox/EasyPR/model/svm.xml";
 	m_getFeatures = getHistogramFeatures;
 
 	LoadModel();
