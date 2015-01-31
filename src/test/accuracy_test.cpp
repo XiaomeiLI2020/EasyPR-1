@@ -1,5 +1,5 @@
-// Í¨ÓÃÕıÈ·ÂÊ²âÊÔÎÄ¼ş
-// AcurayTest¶ÔÓ¦µ½main¿ØÖÆÃüÁîÖĞµÄÑ¡Ïî2
+// é€šç”¨æ­£ç¡®ç‡æµ‹è¯•æ–‡ä»¶
+// AcurayTestå¯¹åº”åˆ°mainæ§åˆ¶å‘½ä»¤ä¸­çš„é€‰é¡¹2
 
 #include "../include/plate_recognize.h"
 #include "../include/util.h"
@@ -9,158 +9,158 @@ using namespace easypr;
 
 int acurayTest(const string& test_path)
 {
-	////»ñÈ¡¸ÃÂ·¾¶ÏÂµÄËùÓĞÎÄ¼ş
-	vector<string> files;
-	getFiles(test_path, files);
-
-	CPlateLocate lo;
-	CPlateJudge ju;
-	CPlateRecognize pr;
-
-	pr.LoadANN("/Users/zhoushiwei/Dropbox/EasyPR/model/ann.xml");
-	pr.LoadSVM("/Users/zhoushiwei/Dropbox/EasyPR/model/svm.xml");
-	pr.setLifemode(true);
-
-	int size = (int)files.size();
-	//int size = 200;
-
-	if (0 == size)
-	{
-		cout << "No File Found in general_test/native_test!" << endl;
-		return 0;
-	}
-
-	cout << "Begin to test the easypr accuracy!" << endl;
-
-	// ×ÜµÄ²âÊÔÍ¼Æ¬ÊıÁ¿
-	int count_all = 0;
-	// ´íÎóµÄÍ¼Æ¬ÊıÁ¿
-	int count_err = 0;
-	// Î´Ê¶±ğµÄÍ¼Æ¬ÊıÁ¿
-	int count_norecogin = 0;
-
-	// ×ÜµÄ×Ö·û²î¾à
-	float diff_all = 0;
-	// Æ½¾ù×Ö·û²î¾à
-	float diff_avg = 0;
-	// ÍêÈ«Æ¥ÅäµÄÊ¶±ğ´ÎÊı
-	float match_count = 0;
-	// ÍêÈ«Æ¥ÅäµÄÊ¶±ğ´ÎÊıËùÕ¼Ê¶±ğÍ¼Æ¬ÖĞµÄ±ÈÀı
-	float match_rate = 0;
-
-	for (int i = 0; i < size; i++)
-	{
-		string filepath = files[i].c_str();
-		cout << "------------------" << endl;
-
-		// »ñÈ¡ÕæÊµµÄ³µÅÆ
-		string plateLicense = "";
-		getFileName(filepath, plateLicense);
-
-		cout << "Ô­ÅÆ:" << plateLicense << endl;
-
-		// EasyPR¿ªÊ¼ÅĞ¶Ï³µÅÆ
-		Mat src = imread(filepath);
-		vector<string> plateVec;
-		int result = pr.plateRecognize(src, plateVec);
-		if (result == 0)
-		{
-			int num = plateVec.size();
-
-			if (num == 0)
-			{
-				cout << ""<< "ÎŞ³µÅÆ" <<endl;
-				if (plateLicense != "ÎŞ³µÅÆ")
-					count_norecogin++;
-			} 
-			else if ( num > 1)
-			{
-				// ¶à³µÅÆÊ¹ÓÃdiff×îĞ¡µÄÄÇ¸ö¼ÇÂ¼
-				int mindiff = 10000;
-				for (int j = 0; j < num; j++)
-				{
-					cout << plateVec[j] << " (" << j+1 << ")"<<endl;
-					string colorplate = plateVec[j];
-
-					// ¼ÆËã"À¶ÅÆ:ËÕE7KU22"ÖĞÃ°ºÅºóÃæµÄ³µÅÆ´óĞ¡"
-					vector<string> spilt_plate;
-					SplitString(colorplate, spilt_plate, ":");
-
-					int size = spilt_plate.size();
-					if (size == 2)
-					{
-						int diff = levenshtein_distance(plateLicense, spilt_plate[size-1]);
-						if (diff < mindiff)
-							mindiff = diff;
-					}
-				}
-
-				cout << "²î¾à:" << mindiff << "¸ö×Ö·û" << endl;
-				if(mindiff == 0)
-				{
-					// ÍêÈ«Æ¥Åä
-					match_count++;
-				}
-				diff_all = diff_all + mindiff;
-			}
-			else
-			{
-				// µ¥³µÅÆÖ»¼ÆËãÒ»´Îdiff
-				for (int j = 0; j < num; j++)
-				{
-					cout << plateVec[j] <<endl;
-					string colorplate = plateVec[j];
-
-					// ¼ÆËã"À¶ÅÆ:ËÕE7KU22"ÖĞÃ°ºÅºóÃæµÄ³µÅÆ´óĞ¡"
-					vector<string> spilt_plate;
-					SplitString(colorplate, spilt_plate, ":");
-
-					int size = spilt_plate.size();
-					if (size == 2)
-					{
-						int diff = levenshtein_distance(plateLicense, spilt_plate[size-1]);
-						cout << "²î¾à:" << diff << "¸ö×Ö·û" << endl;
-
-						if(diff == 0)
-						{
-							// ÍêÈ«Æ¥Åä
-							match_count++;
-						}
-						diff_all = diff_all + diff;
-					}
-				}
-
-			}
-		} 
-		else
-		{
-			cout << "´íÎóÂë:" << result << endl;
-			count_err++;
-		}
-		count_all++;
-	}
-
-	cout << "------------------" << endl;
-	cout << "Easypr accuracy test end!" << endl;
-	cout << "------------------" << endl;
-	cout << endl;
-	cout << "ÕıÈ·ÂÊÍ³¼Æ:"  << endl;
-	cout << "×ÜÍ¼Æ¬Êı:" << count_all << "ÕÅ,  ";
-	cout << "Î´Ê¶±ğÍ¼Æ¬:" << count_norecogin << "ÕÅ,  ";
-
-	float count_recogin = count_all - (count_err + count_norecogin);
-	float count_rate  = count_recogin / count_all * 100;
-	cout << "Ê¶±ğÂÊ:" << count_rate << "%  " << endl;
-
-	diff_avg = diff_all / count_recogin;
-	match_rate = match_count/ count_recogin * 100;
-
-	cout << "Æ½¾ù×Ö¾à:" << diff_avg << "¸ö,  ";
-	cout << "ÍêÈ«Æ¥ÅäÊı:" << match_count << "ÕÅ,  ";
-	cout << "ÍêÈ«Æ¥ÅäÂÊ:" << match_rate << "%  " << endl;
-	cout << endl;
-
-	cout << "------------------" << endl;
-
-	return 0;
+    ////è·å–è¯¥è·¯å¾„ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
+    vector<string> files;
+    getFiles(test_path, files);
+    
+    CPlateLocate lo;
+    CPlateJudge ju;
+    CPlateRecognize pr;
+    
+    pr.LoadANN("/Users/zhoushiwei/Dropbox/EasyPR/model/ann.xml");
+    pr.LoadSVM("/Users/zhoushiwei/Dropbox/EasyPR/model/svm.xml");
+    pr.setLifemode(true);
+    
+    int size = (int)files.size();
+    //int size = 200;
+    
+    if (0 == size)
+    {
+        cout << "No File Found in general_test/native_test!" << endl;
+        return 0;
+    }
+    
+    cout << "Begin to test the easypr accuracy!" << endl;
+    
+    // æ€»çš„æµ‹è¯•å›¾ç‰‡æ•°é‡
+    int count_all = 0;
+    // é”™è¯¯çš„å›¾ç‰‡æ•°é‡
+    int count_err = 0;
+    // æœªè¯†åˆ«çš„å›¾ç‰‡æ•°é‡
+    int count_norecogin = 0;
+    
+    // æ€»çš„å­—ç¬¦å·®è·
+    float diff_all = 0;
+    // å¹³å‡å­—ç¬¦å·®è·
+    float diff_avg = 0;
+    // å®Œå…¨åŒ¹é…çš„è¯†åˆ«æ¬¡æ•°
+    float match_count = 0;
+    // å®Œå…¨åŒ¹é…çš„è¯†åˆ«æ¬¡æ•°æ‰€å è¯†åˆ«å›¾ç‰‡ä¸­çš„æ¯”ä¾‹
+    float match_rate = 0;
+    
+    for (int i = 0; i < size; i++)
+    {
+        string filepath = files[i].c_str();
+        cout << "------------------" << endl;
+        
+        // è·å–çœŸå®çš„è½¦ç‰Œ
+        string plateLicense = "";
+        getFileName(filepath, plateLicense);
+        
+        cout << "åŸç‰Œ:" << plateLicense << endl;
+        
+        // EasyPRå¼€å§‹åˆ¤æ–­è½¦ç‰Œ
+        Mat src = imread(filepath);
+        vector<string> plateVec;
+        int result = pr.plateRecognize(src, plateVec);
+        if (result == 0)
+        {
+            int num = plateVec.size();
+            
+            if (num == 0)
+            {
+                cout << ""<< "æ— è½¦ç‰Œ" <<endl;
+                if (plateLicense != "æ— è½¦ç‰Œ")
+                    count_norecogin++;
+            }
+            else if ( num > 1)
+            {
+                // å¤šè½¦ç‰Œä½¿ç”¨diffæœ€å°çš„é‚£ä¸ªè®°å½•
+                int mindiff = 10000;
+                for (int j = 0; j < num; j++)
+                {
+                    cout << plateVec[j] << " (" << j+1 << ")"<<endl;
+                    string colorplate = plateVec[j];
+                    
+                    // è®¡ç®—"è“ç‰Œ:è‹E7KU22"ä¸­å†’å·åé¢çš„è½¦ç‰Œå¤§å°"
+                    vector<string> spilt_plate;
+                    SplitString(colorplate, spilt_plate, ":");
+                    
+                    int size = spilt_plate.size();
+                    if (size == 2)
+                    {
+                        int diff = levenshtein_distance(plateLicense, spilt_plate[size-1]);
+                        if (diff < mindiff)
+                            mindiff = diff;
+                    }
+                }
+                
+                cout << "å·®è·:" << mindiff << "ä¸ªå­—ç¬¦" << endl;
+                if(mindiff == 0)
+                {
+                    // å®Œå…¨åŒ¹é…
+                    match_count++;
+                }
+                diff_all = diff_all + mindiff;
+            }
+            else
+            {
+                // å•è½¦ç‰Œåªè®¡ç®—ä¸€æ¬¡diff
+                for (int j = 0; j < num; j++)
+                {
+                    cout << plateVec[j] <<endl;
+                    string colorplate = plateVec[j];
+                    
+                    // è®¡ç®—"è“ç‰Œ:è‹E7KU22"ä¸­å†’å·åé¢çš„è½¦ç‰Œå¤§å°"
+                    vector<string> spilt_plate;
+                    SplitString(colorplate, spilt_plate, ":");
+                    
+                    int size = spilt_plate.size();
+                    if (size == 2)
+                    {
+                        int diff = levenshtein_distance(plateLicense, spilt_plate[size-1]);
+                        cout << "å·®è·:" << diff << "ä¸ªå­—ç¬¦" << endl;
+                        
+                        if(diff == 0)
+                        {
+                            // å®Œå…¨åŒ¹é…
+                            match_count++;
+                        }
+                        diff_all = diff_all + diff;
+                    }
+                }
+                
+            }
+        } 
+        else
+        {
+            cout << "é”™è¯¯ç :" << result << endl;
+            count_err++;
+        }
+        count_all++;
+    }
+    
+    cout << "------------------" << endl;
+    cout << "Easypr accuracy test end!" << endl;
+    cout << "------------------" << endl;
+    cout << endl;
+    cout << "æ­£ç¡®ç‡ç»Ÿè®¡:"  << endl;
+    cout << "æ€»å›¾ç‰‡æ•°:" << count_all << "å¼ ,  ";
+    cout << "æœªè¯†åˆ«å›¾ç‰‡:" << count_norecogin << "å¼ ,  ";
+    
+    float count_recogin = count_all - (count_err + count_norecogin);
+    float count_rate  = count_recogin / count_all * 100;
+    cout << "è¯†åˆ«ç‡:" << count_rate << "%  " << endl;
+    
+    diff_avg = diff_all / count_recogin;
+    match_rate = match_count/ count_recogin * 100;
+    
+    cout << "å¹³å‡å­—è·:" << diff_avg << "ä¸ª,  ";
+    cout << "å®Œå…¨åŒ¹é…æ•°:" << match_count << "å¼ ,  ";
+    cout << "å®Œå…¨åŒ¹é…ç‡:" << match_rate << "%  " << endl;
+    cout << endl;
+    
+    cout << "------------------" << endl;
+    
+    return 0;
 }

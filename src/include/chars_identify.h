@@ -7,7 +7,7 @@
 // Reference:	Mastering OpenCV with Practical Computer Vision Projects
 // Reference:	CSDN Bloger taotao1233
 // Desciption:
-// Defines CCharsIdentify 
+// Defines CCharsIdentify
 //////////////////////////////////////////////////////////////////////////
 #ifndef __CHARS_IDENTIFY_H__
 #define __CHARS_IDENTIFY_H__
@@ -15,51 +15,51 @@
 #include "prep.h"
 
 /*! \namespace easypr
-    Namespace where all the C++ EasyPR functionality resides
-*/
+ Namespace where all the C++ EasyPR functionality resides
+ */
 namespace easypr {
-	
-class CCharsIdentify 
-{
-public:
-	CCharsIdentify();
-
-	//! ×Ö·û·Ö¸î
-	string charsIdentify(Mat, bool);
-
-	//! ×Ö·û·ÖÀà
-	int classify(Mat, bool);
-
-	//create the accumulation histograms,img is a binary image, t is Ë®Æ½»ò´¹Ö±
-	Mat ProjectedHistogram(Mat img, int t);
-
-	//! »ñµÃ×Ö·ûµÄÌØÕ÷Í¼
-	Mat features(Mat in, int sizeData);
-
-	//! ×°ÔØANNÄ£ĞÍ
-	void LoadModel();
-
-	//! ×°ÔØANNÄ£ĞÍ
-	void LoadModel(string s);
-
-	//! ÉèÖÃÓë¶ÁÈ¡Ä£ĞÍÂ·¾¶
-	inline void setModelPath(string path){	m_path = path;	}
-	inline string getModelPath() const{	 return m_path;	}
-
-private:
-	//£¡Ê¹ÓÃµÄANNÄ£ĞÍ
-	CvANN_MLP ann;
-
-	//! Ä£ĞÍ´æ´¢Â·¾¶
-	string m_path;
-
-	//! ÌØÕ÷³ß´ç
-	int m_predictSize;
-
-	//! Ê¡·İ¶ÔÓ¦map
-	map<string, string> m_map;
-};
-
+    
+    class CCharsIdentify
+    {
+    public:
+        CCharsIdentify();
+        
+        //! å­—ç¬¦åˆ†å‰²
+        string charsIdentify(Mat, bool);
+        
+        //! å­—ç¬¦åˆ†ç±»
+        int classify(Mat, bool);
+        
+        //create the accumulation histograms,img is a binary image, t is æ°´å¹³æˆ–å‚ç›´
+        Mat ProjectedHistogram(Mat img, int t);
+        
+        //! è·å¾—å­—ç¬¦çš„ç‰¹å¾å›¾
+        Mat features(Mat in, int sizeData);
+        
+        //! è£…è½½ANNæ¨¡å‹
+        void LoadModel();
+        
+        //! è£…è½½ANNæ¨¡å‹
+        void LoadModel(string s);
+        
+        //! è®¾ç½®ä¸è¯»å–æ¨¡å‹è·¯å¾„
+        inline void setModelPath(string path){	m_path = path;	}
+        inline string getModelPath() const{	 return m_path;	}
+        
+    private:
+        //ï¼ä½¿ç”¨çš„ANNæ¨¡å‹
+        CvANN_MLP ann;
+        
+        //! æ¨¡å‹å­˜å‚¨è·¯å¾„
+        string m_path;
+        
+        //! ç‰¹å¾å°ºå¯¸
+        int m_predictSize;
+        
+        //! çœä»½å¯¹åº”map
+        map<string, string> m_map;
+    };
+    
 }	/* \namespace easypr  */
 
 #endif /* endif __CHARS_IDENTIFY_H__ */

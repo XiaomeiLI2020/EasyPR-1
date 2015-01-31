@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		53CB66C41A7BEE97007B7FEB /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66C31A7BEE97007B7FEB /* test.cpp */; };
-		53EBCD251A7B58CF002F67C1 /* chars_identify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD041A7B58CF002F67C1 /* chars_identify.cpp */; };
-		53EBCD261A7B58CF002F67C1 /* chars_recognise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD051A7B58CF002F67C1 /* chars_recognise.cpp */; };
+		53CB66F31A7C8C09007B7FEB /* chars_identify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66F21A7C8C09007B7FEB /* chars_identify.cpp */; };
+		53CB66F81A7C9082007B7FEB /* accuracy_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66F71A7C9082007B7FEB /* accuracy_test.cpp */; };
+		53CB66FA1A7C90B3007B7FEB /* chars_recognise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66F91A7C90B3007B7FEB /* chars_recognise.cpp */; };
+		53CB66FC1A7C9294007B7FEB /* mc_data_preparef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66FB1A7C9294007B7FEB /* mc_data_preparef.cpp */; };
 		53EBCD271A7B58CF002F67C1 /* chars_segment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD061A7B58CF002F67C1 /* chars_segment.cpp */; };
 		53EBCD281A7B58CF002F67C1 /* features.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD071A7B58CF002F67C1 /* features.cpp */; };
 		53EBCD291A7B58CF002F67C1 /* plate_detect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD081A7B58CF002F67C1 /* plate_detect.cpp */; };
@@ -17,14 +19,12 @@
 		53EBCD2B1A7B58CF002F67C1 /* plate_locate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD0A1A7B58CF002F67C1 /* plate_locate.cpp */; };
 		53EBCD2C1A7B58CF002F67C1 /* plate_recognize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD0B1A7B58CF002F67C1 /* plate_recognize.cpp */; };
 		53EBCD2D1A7B58CF002F67C1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD171A7B58CF002F67C1 /* main.cpp */; };
-		53EBCD2E1A7B58CF002F67C1 /* accuracy_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD191A7B58CF002F67C1 /* accuracy_test.cpp */; };
 		53EBCD301A7B58CF002F67C1 /* ann_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1C1A7B58CF002F67C1 /* ann_train.cpp */; };
 		53EBCD311A7B58CF002F67C1 /* svm_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1D1A7B58CF002F67C1 /* svm_train.cpp */; };
 		53EBCD321A7B58CF002F67C1 /* deface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1F1A7B58CF002F67C1 /* deface.cpp */; };
 		53EBCD331A7B58CF002F67C1 /* general_test_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD201A7B58CF002F67C1 /* general_test_prepare.cpp */; };
 		53EBCD341A7B58CF002F67C1 /* generate_gdts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD211A7B58CF002F67C1 /* generate_gdts.cpp */; };
 		53EBCD351A7B58CF002F67C1 /* learn_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD221A7B58CF002F67C1 /* learn_prepare.cpp */; };
-		53EBCD361A7B58CF002F67C1 /* mc_data_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD231A7B58CF002F67C1 /* mc_data_prepare.cpp */; };
 		53EBCD371A7B58CF002F67C1 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD241A7B58CF002F67C1 /* util.cpp */; };
 		53EBCE001A7B593A002F67C1 /* libopencv_calib3d.2.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBCDEF1A7B593A002F67C1 /* libopencv_calib3d.2.4.8.dylib */; };
 		53EBCE011A7B593A002F67C1 /* libopencv_contrib.2.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBCDF01A7B593A002F67C1 /* libopencv_contrib.2.4.8.dylib */; };
@@ -59,34 +59,34 @@
 
 /* Begin PBXFileReference section */
 		53CB66C31A7BEE97007B7FEB /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		53CB66F21A7C8C09007B7FEB /* chars_identify.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_identify.cpp; sourceTree = "<group>"; };
+		53CB66F41A7C8E5B007B7FEB /* chars_recognise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_recognise.h; sourceTree = "<group>"; };
+		53CB66F71A7C9082007B7FEB /* accuracy_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = accuracy_test.cpp; sourceTree = "<group>"; };
+		53CB66F91A7C90B3007B7FEB /* chars_recognise.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_recognise.cpp; sourceTree = "<group>"; };
+		53CB66FB1A7C9294007B7FEB /* mc_data_preparef.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mc_data_preparef.cpp; sourceTree = "<group>"; };
 		53E6E8CF1A7748F80044931C /* EasyPR */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyPR; sourceTree = BUILT_PRODUCTS_DIR; };
-		53EBCD041A7B58CF002F67C1 /* chars_identify.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = chars_identify.cpp; sourceTree = "<group>"; };
-		53EBCD051A7B58CF002F67C1 /* chars_recognise.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = chars_recognise.cpp; sourceTree = "<group>"; };
-		53EBCD061A7B58CF002F67C1 /* chars_segment.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = chars_segment.cpp; sourceTree = "<group>"; };
-		53EBCD071A7B58CF002F67C1 /* features.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = features.cpp; sourceTree = "<group>"; };
-		53EBCD081A7B58CF002F67C1 /* plate_detect.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = plate_detect.cpp; sourceTree = "<group>"; };
-		53EBCD091A7B58CF002F67C1 /* plate_judge.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = plate_judge.cpp; sourceTree = "<group>"; };
-		53EBCD0A1A7B58CF002F67C1 /* plate_locate.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = plate_locate.cpp; sourceTree = "<group>"; };
-		53EBCD0B1A7B58CF002F67C1 /* plate_recognize.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = plate_recognize.cpp; sourceTree = "<group>"; };
+		53EBCD061A7B58CF002F67C1 /* chars_segment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_segment.cpp; sourceTree = "<group>"; };
+		53EBCD071A7B58CF002F67C1 /* features.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = features.cpp; sourceTree = "<group>"; };
+		53EBCD081A7B58CF002F67C1 /* plate_detect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_detect.cpp; sourceTree = "<group>"; };
+		53EBCD091A7B58CF002F67C1 /* plate_judge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_judge.cpp; sourceTree = "<group>"; };
+		53EBCD0A1A7B58CF002F67C1 /* plate_locate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_locate.cpp; sourceTree = "<group>"; };
+		53EBCD0B1A7B58CF002F67C1 /* plate_recognize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_recognize.cpp; sourceTree = "<group>"; };
 		53EBCD0D1A7B58CF002F67C1 /* chars_identify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_identify.h; sourceTree = "<group>"; };
-		53EBCD0E1A7B58CF002F67C1 /* chars_recognise.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = chars_recognise.h; sourceTree = "<group>"; };
-		53EBCD0F1A7B58CF002F67C1 /* chars_segment.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = chars_segment.h; sourceTree = "<group>"; };
-		53EBCD101A7B58CF002F67C1 /* features.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
-		53EBCD111A7B58CF002F67C1 /* plate_detect.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = plate_detect.h; sourceTree = "<group>"; };
+		53EBCD0F1A7B58CF002F67C1 /* chars_segment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_segment.h; sourceTree = "<group>"; };
+		53EBCD101A7B58CF002F67C1 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
+		53EBCD111A7B58CF002F67C1 /* plate_detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_detect.h; sourceTree = "<group>"; };
 		53EBCD121A7B58CF002F67C1 /* plate_judge.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = plate_judge.h; sourceTree = "<group>"; };
-		53EBCD131A7B58CF002F67C1 /* plate_locate.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = plate_locate.h; sourceTree = "<group>"; };
-		53EBCD141A7B58CF002F67C1 /* plate_recognize.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = plate_recognize.h; sourceTree = "<group>"; };
+		53EBCD131A7B58CF002F67C1 /* plate_locate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_locate.h; sourceTree = "<group>"; };
+		53EBCD141A7B58CF002F67C1 /* plate_recognize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_recognize.h; sourceTree = "<group>"; };
 		53EBCD151A7B58CF002F67C1 /* prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prep.h; sourceTree = "<group>"; };
-		53EBCD161A7B58CF002F67C1 /* util.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		53EBCD161A7B58CF002F67C1 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		53EBCD171A7B58CF002F67C1 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		53EBCD191A7B58CF002F67C1 /* accuracy_test.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = accuracy_test.cpp; sourceTree = "<group>"; };
 		53EBCD1C1A7B58CF002F67C1 /* ann_train.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = ann_train.cpp; sourceTree = "<group>"; };
 		53EBCD1D1A7B58CF002F67C1 /* svm_train.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = svm_train.cpp; sourceTree = "<group>"; };
-		53EBCD1F1A7B58CF002F67C1 /* deface.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = deface.cpp; sourceTree = "<group>"; };
-		53EBCD201A7B58CF002F67C1 /* general_test_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = general_test_prepare.cpp; sourceTree = "<group>"; };
-		53EBCD211A7B58CF002F67C1 /* generate_gdts.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = generate_gdts.cpp; sourceTree = "<group>"; };
-		53EBCD221A7B58CF002F67C1 /* learn_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = learn_prepare.cpp; sourceTree = "<group>"; };
-		53EBCD231A7B58CF002F67C1 /* mc_data_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = mc_data_prepare.cpp; sourceTree = "<group>"; };
+		53EBCD1F1A7B58CF002F67C1 /* deface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deface.cpp; sourceTree = "<group>"; };
+		53EBCD201A7B58CF002F67C1 /* general_test_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = general_test_prepare.cpp; sourceTree = "<group>"; };
+		53EBCD211A7B58CF002F67C1 /* generate_gdts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = generate_gdts.cpp; sourceTree = "<group>"; };
+		53EBCD221A7B58CF002F67C1 /* learn_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = learn_prepare.cpp; sourceTree = "<group>"; };
 		53EBCD241A7B58CF002F67C1 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
 		53EBCDEF1A7B593A002F67C1 /* libopencv_calib3d.2.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_calib3d.2.4.8.dylib; sourceTree = "<group>"; };
 		53EBCDF01A7B593A002F67C1 /* libopencv_contrib.2.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_contrib.2.4.8.dylib; sourceTree = "<group>"; };
@@ -176,9 +176,9 @@
 		53EBCD031A7B58CF002F67C1 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				53EBCD041A7B58CF002F67C1 /* chars_identify.cpp */,
-				53EBCD051A7B58CF002F67C1 /* chars_recognise.cpp */,
 				53EBCD061A7B58CF002F67C1 /* chars_segment.cpp */,
+				53CB66F91A7C90B3007B7FEB /* chars_recognise.cpp */,
+				53CB66F21A7C8C09007B7FEB /* chars_identify.cpp */,
 				53EBCD071A7B58CF002F67C1 /* features.cpp */,
 				53EBCD081A7B58CF002F67C1 /* plate_detect.cpp */,
 				53EBCD091A7B58CF002F67C1 /* plate_judge.cpp */,
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				53EBCD0D1A7B58CF002F67C1 /* chars_identify.h */,
-				53EBCD0E1A7B58CF002F67C1 /* chars_recognise.h */,
+				53CB66F41A7C8E5B007B7FEB /* chars_recognise.h */,
 				53EBCD0F1A7B58CF002F67C1 /* chars_segment.h */,
 				53EBCD101A7B58CF002F67C1 /* features.h */,
 				53EBCD111A7B58CF002F67C1 /* plate_detect.h */,
@@ -209,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				53CB66C31A7BEE97007B7FEB /* test.cpp */,
-				53EBCD191A7B58CF002F67C1 /* accuracy_test.cpp */,
+				53CB66F71A7C9082007B7FEB /* accuracy_test.cpp */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 				53EBCD201A7B58CF002F67C1 /* general_test_prepare.cpp */,
 				53EBCD211A7B58CF002F67C1 /* generate_gdts.cpp */,
 				53EBCD221A7B58CF002F67C1 /* learn_prepare.cpp */,
-				53EBCD231A7B58CF002F67C1 /* mc_data_prepare.cpp */,
+				53CB66FB1A7C9294007B7FEB /* mc_data_preparef.cpp */,
 				53EBCD241A7B58CF002F67C1 /* util.cpp */,
 			);
 			path = util;
@@ -317,25 +317,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53CB66F81A7C9082007B7FEB /* accuracy_test.cpp in Sources */,
 				53EBCD291A7B58CF002F67C1 /* plate_detect.cpp in Sources */,
 				53EBCD321A7B58CF002F67C1 /* deface.cpp in Sources */,
 				53EBCD281A7B58CF002F67C1 /* features.cpp in Sources */,
 				53EBCD2D1A7B58CF002F67C1 /* main.cpp in Sources */,
 				53EBCD351A7B58CF002F67C1 /* learn_prepare.cpp in Sources */,
-				53EBCD361A7B58CF002F67C1 /* mc_data_prepare.cpp in Sources */,
 				53EBCD2A1A7B58CF002F67C1 /* plate_judge.cpp in Sources */,
-				53EBCD2E1A7B58CF002F67C1 /* accuracy_test.cpp in Sources */,
 				53EBCD2B1A7B58CF002F67C1 /* plate_locate.cpp in Sources */,
 				53EBCD271A7B58CF002F67C1 /* chars_segment.cpp in Sources */,
 				53EBCD301A7B58CF002F67C1 /* ann_train.cpp in Sources */,
 				53EBCD331A7B58CF002F67C1 /* general_test_prepare.cpp in Sources */,
 				53EBCD371A7B58CF002F67C1 /* util.cpp in Sources */,
 				53CB66C41A7BEE97007B7FEB /* test.cpp in Sources */,
-				53EBCD251A7B58CF002F67C1 /* chars_identify.cpp in Sources */,
 				53EBCD311A7B58CF002F67C1 /* svm_train.cpp in Sources */,
-				53EBCD261A7B58CF002F67C1 /* chars_recognise.cpp in Sources */,
+				53CB66F31A7C8C09007B7FEB /* chars_identify.cpp in Sources */,
 				53EBCD341A7B58CF002F67C1 /* generate_gdts.cpp in Sources */,
 				53EBCD2C1A7B58CF002F67C1 /* plate_recognize.cpp in Sources */,
+				53CB66FA1A7C90B3007B7FEB /* chars_recognise.cpp in Sources */,
+				53CB66FC1A7C9294007B7FEB /* mc_data_preparef.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
