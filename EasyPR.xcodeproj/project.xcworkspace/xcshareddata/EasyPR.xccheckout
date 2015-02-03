@@ -10,14 +10,14 @@
 	<string>EasyPR</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>790082FE0AF6BE55DDC35E06F24B2A4694709934</key>
+		<key>F1A85CC89E8F997FCBB9E3BC1B3DD212F5FF9A7B</key>
 		<string>github.com:zhoushiwei/EasyPR.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>EasyPR.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>790082FE0AF6BE55DDC35E06F24B2A4694709934</key>
+		<key>F1A85CC89E8F997FCBB9E3BC1B3DD212F5FF9A7B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>790082FE0AF6BE55DDC35E06F24B2A4694709934</string>
+	<string>F1A85CC89E8F997FCBB9E3BC1B3DD212F5FF9A7B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>790082FE0AF6BE55DDC35E06F24B2A4694709934</string>
+			<string>F1A85CC89E8F997FCBB9E3BC1B3DD212F5FF9A7B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>EasyPR</string>
 		</dict>

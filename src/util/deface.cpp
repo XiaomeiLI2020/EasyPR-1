@@ -11,9 +11,10 @@
 
 #include <iostream>
 #include <opencv2/opencv.hpp>
-#include <fstream>
-#include <iostream>
-#include <string>
+#include <dirent.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 //	反人脸识别文件
 //	在发布数据到general_test数据集里，请先用这里的方法对图像进行处理

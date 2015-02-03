@@ -131,7 +131,7 @@ int saveTrainData()
 		vector<string> files;
 		getFiles(ss.str(), files);
 
-		int size = files.size();
+		int size = (int)files.size();
 		for (int j = 0; j < size; j++)
 		{
 			cout << files[j].c_str() << endl;
@@ -160,7 +160,7 @@ int saveTrainData()
 		vector<string> files;
 		getFiles(ss.str(), files);
 
-		int size = files.size();
+		int size = (int)files.size();
 		for (int j = 0; j < size; j++)
 		{
 			cout << files[j].c_str() << endl;

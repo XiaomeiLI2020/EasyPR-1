@@ -33,7 +33,7 @@ int generate_gdts()
 	////获取该路径下的所有文件
 	vector<string> files;
 	getFiles(src_path, files);
-	int size = files.size();
+	int size =(int)files.size();
 
 	if (0 == size)
 	{
@@ -61,7 +61,7 @@ int generate_gdts()
 		// 将图片导出到新路径
 		vector<string> spilt_path;
 		SplitString(filepath, spilt_path, "\\");
-		int spiltsize = spilt_path.size();
+		int spiltsize = (int)spilt_path.size();
 		string filename = "";
 
 		if (spiltsize != 0)

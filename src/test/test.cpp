@@ -133,7 +133,7 @@ int test_plate_locate()
     int result = plate.plateLocate(src, resultVec);
     if (result == 0)
     {
-        int num = resultVec.size();
+        int num = (int)resultVec.size();
         for (int j = 0; j < num; j++)
         {
             Mat resultMat = resultVec[j];
@@ -169,7 +169,7 @@ int test_plate_judge()
     cout << "plate_locate_img" << endl;
     if (resultLo == 0)
     {
-        int num = matVec.size();
+        int num = (int)matVec.size();
         for (int j = 0; j < num; j++)
         {
             Mat resultMat = matVec[j];
@@ -187,7 +187,7 @@ int test_plate_judge()
     cout << "plate_judge_img" << endl;
     if (resultJu == 0)
     {
-        int num = resultVec.size();
+        int num = (int)resultVec.size();
         for (int j = 0; j < num; j++)
         {
             Mat resultMat = resultVec[j];
@@ -287,7 +287,7 @@ int test_plate_detect()
     int result = pd.plateDetect(src, resultVec);
     if (result == 0)
     {
-        int num = resultVec.size();
+        int num = (int)resultVec.size();
         for (int j = 0; j < num; j++)
         {
             Mat resultMat = resultVec[j];

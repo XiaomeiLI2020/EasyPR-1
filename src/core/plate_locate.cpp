@@ -226,7 +226,7 @@ int CPlateLocate::plateLocate(Mat src, vector<Mat>& resultVec)
 	
 	vector<RotatedRect> rects;
 	//Remove patch that are no inside limits of aspect ratio and area.
-	int t = 0;
+	//int t = 0;
 	while (itc != contours.end())
 	{
 		//Create bounding rect of object

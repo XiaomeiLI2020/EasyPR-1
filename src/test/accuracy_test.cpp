@@ -65,7 +65,7 @@ int acurayTest(const string& test_path)
         int result = pr.plateRecognize(src, plateVec);
         if (result == 0)
         {
-            int num = plateVec.size();
+            int num = (int)plateVec.size();
             
             if (num == 0)
             {
@@ -86,7 +86,7 @@ int acurayTest(const string& test_path)
                     vector<string> spilt_plate;
                     SplitString(colorplate, spilt_plate, ":");
                     
-                    int size = spilt_plate.size();
+                    int size =(int) spilt_plate.size();
                     if (size == 2)
                     {
                         int diff = levenshtein_distance(plateLicense, spilt_plate[size-1]);
@@ -115,7 +115,7 @@ int acurayTest(const string& test_path)
                     vector<string> spilt_plate;
                     SplitString(colorplate, spilt_plate, ":");
                     
-                    int size = spilt_plate.size();
+                    int size =(int) spilt_plate.size();
                     if (size == 2)
                     {
                         int diff = levenshtein_distance(plateLicense, spilt_plate[size-1]);

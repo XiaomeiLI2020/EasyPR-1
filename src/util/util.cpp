@@ -1,37 +1,33 @@
 #include <iostream>
-#include <cstdlib>
-//#include <io.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <vector>
-
+#include <opencv2/opencv.hpp>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <dirent.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 using namespace std;
 
 void getFiles(string path, vector<string>& files)
 {
-//	//文件句柄
-//	long   hFile   =   0;
-//	//文件信息
-//	struct _finddata_t fileinfo;
-//	string p;
-//	if((hFile = _findfirst(p.assign(path).append("\\*").c_str(),&fileinfo)) !=  -1)
-//	{
-//		do
-//		{
-//			//如果是目录,迭代之
-//			//如果不是,加入列表
-//			if((fileinfo.attrib &  _A_SUBDIR))
-//			{
-//				if(strcmp(fileinfo.name,".") != 0  &&  strcmp(fileinfo.name,"..") != 0)
-//					getFiles( p.assign(path).append("\\").append(fileinfo.name), files );
-//			}
-//			else
-//			{
-//				files.push_back(p.assign(path).append("\\").append(fileinfo.name) );
-//			}
-//		}while(_findnext(hFile, &fileinfo)  == 0);
-//		_findclose(hFile);
-//	}
+    DIR *dp;
+    string dir = path, filepath;
+    struct dirent *dirp;
+    struct stat filestat;
+    dp = opendir( path.c_str() );
+    while ((dirp=readdir(dp))) {
+        filepath=dir+"/" +dirp->d_name;
+        //if the file is directory , skip the file
+        if (stat(filepath.c_str(),&filestat)) {
+            continue;
+        }
+        if (S_ISDIR(filestat.st_mode)) {
+            continue;
+        }
+        files.push_back(filepath);  
+    }
+
 }
 
 //C++的spilt函数
@@ -58,7 +54,7 @@ void getFileName(const string& filepath, string& name)
 	vector<string> spilt_path;
 	SplitString(filepath, spilt_path, "\\");
 
-	int spiltsize = spilt_path.size();
+	int spiltsize = (int)spilt_path.size();
 	string filename = "";
 	if (spiltsize != 0)
 	{
@@ -67,7 +63,7 @@ void getFileName(const string& filepath, string& name)
 		vector<string> spilt_name;
 		SplitString(filename, spilt_name, ".");
 
-		int name_size = spilt_name.size();
+		int name_size = (int)spilt_name.size();
 		if (name_size != 0)
 		{
 			name = spilt_name[0];

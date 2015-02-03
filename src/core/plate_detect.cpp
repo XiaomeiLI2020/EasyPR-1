@@ -32,7 +32,7 @@ int CPlateDetect::plateDetect(Mat src, vector<Mat>& resultVec)
 		
 	if(getPDDebug())
 	{ 
-		int size = resultVec.size();
+		int size = (int)resultVec.size();
 		for (int i = 0; i < size; i++)
 		{
 			Mat img = resultVec[i];

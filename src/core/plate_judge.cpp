@@ -73,7 +73,7 @@ int CPlateJudge::plateJudge(const Mat& inMat,int& result)
 int CPlateJudge::plateJudge(const vector<Mat>& inVec,
 								  vector<Mat>& resultVec)
 {
-	int num = inVec.size();
+	int num = (int)inVec.size();
 	for (int j = 0; j < num; j++)
 	{
 		Mat inMat = inVec[j];

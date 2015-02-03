@@ -27,7 +27,7 @@ int general_test()
 	pr.LoadSVM("/Users/zhoushiwei/Dropbox/EasyPR/model/svm.xml");
 	pr.setLifemode(true);
 
-	int size = files.size();
+	int size =(int)files.size();
 	//int size = 200;
 
 	if (0 == size)
@@ -50,7 +50,7 @@ int general_test()
 		int result = pr.plateRecognize(src, plateVec);
 		if (result == 0)
 		{
-			int num = plateVec.size();
+			int num = (int)plateVec.size();
 
 			if (num == 0)
 			{

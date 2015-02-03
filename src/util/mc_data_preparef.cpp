@@ -91,7 +91,7 @@ bool isNotNight(const string& filepath)
     vector<string> spilt_path;
     SplitString(filepath, spilt_path, "\\");
     
-    int spiltsize = spilt_path.size();
+    int spiltsize =(int) spilt_path.size();
     string filename = "";
     if (spiltsize != 0)
     {
@@ -101,7 +101,7 @@ bool isNotNight(const string& filepath)
             vector<string> spilt_name;
             SplitString(filename, spilt_name, "-");
             
-            int name_size = spilt_name.size();
+            int name_size =(int) spilt_name.size();
             string datestr = "";
             if (name_size != 0)
             {
@@ -146,7 +146,7 @@ void getPlateLicense(const string& filepath, string& plateLicense)
     vector<string> spilt_path;
     SplitString(filepath, spilt_path, "\\");
     
-    int spiltsize = spilt_path.size();
+    int spiltsize = (int)spilt_path.size();
     string filename = "";
     if (spiltsize != 0)
     {
@@ -156,7 +156,7 @@ void getPlateLicense(const string& filepath, string& plateLicense)
             vector<string> spilt_name;
             SplitString(filename, spilt_name, "-");
             
-            int name_size = spilt_name.size();
+            int name_size =(int)spilt_name.size();
             string plateStr = "";
             string provinceCode = "";
             string provinceStr = "";
@@ -168,7 +168,7 @@ void getPlateLicense(const string& filepath, string& plateLicense)
                 // 将".jpg"去掉
                 vector<string> spilt_plate;
                 SplitString(plateStr, spilt_plate, ".");
-                int plate_size = spilt_plate.size();
+                int plate_size = (int)spilt_plate.size();
                 string rawplate = "";
                 if (plate_size != 0)
                 {

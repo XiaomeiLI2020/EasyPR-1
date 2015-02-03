@@ -30,7 +30,7 @@ void label_data()
 	CPlateLocate lo;
 	CPlateJudge ju;
 
-	int size = files.size();
+	int size =(int) files.size();
 	//int size = 200;
 
 	if (0 == size)
@@ -51,7 +51,7 @@ void label_data()
 		if (0 != resultLo)
 			continue;
 
-		int num = matVec.size();
+		int num =(int) matVec.size();
 		for (int j = 0; j < num; j++)
 		{
 			Mat plate = matVec[j];
