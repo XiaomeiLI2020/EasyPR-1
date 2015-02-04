@@ -16,9 +16,9 @@
 using namespace easypr;
 
 //! 将以下路径改成你的位置
-char * notlabelPath = "F:/data/easypr-data/notlabel";
-char * hasPaltePath = "F:/data/easypr-data/learn/hasPlate/";
-char * noPlatePath = "F:/data/easypr-data/learn/noPlate/";
+string notlabelPath = "F:/data/easypr-data/notlabel";
+string hasPaltePath = "F:/data/easypr-data/learn/hasPlate/";
+string noPlatePath = "F:/data/easypr-data/learn/noPlate/";
 
 //! 读取not label data，生成learn data
 void label_data()

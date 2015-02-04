@@ -12,7 +12,7 @@ namespace easypr{
 void learn2HasPlate(float bound = 0.7)
 {
 
-	char * filePath = "train/data/plate_detect_svm/learn/HasPlate";
+	string filePath = "train/data/plate_detect_svm/learn/HasPlate";
 	vector<string> files;
 
 	////获取该路径下的所有文件
@@ -64,7 +64,7 @@ void learn2HasPlate(float bound = 0.7)
 void learn2NoPlate(float bound = 0.7)
 {
 
-	char * filePath = "train/data/plate_detect_svm/learn/NoPlate";
+	string filePath = "train/data/plate_detect_svm/learn/NoPlate";
 	vector<string> files;
 
 	////获取该路径下的所有文件
@@ -116,7 +116,7 @@ void getHasPlateTrain(Mat& trainingImages, vector<int>& trainingLabels,
 	svmCallback getFeatures = getHisteqFeatures)
 {
 	int label = 1;
-	char * filePath = "train/data/plate_detect_svm/train/HasPlate";
+	string  filePath = "train/data/plate_detect_svm/train/HasPlate";
 	vector<string> files;
 
 	////获取该路径下的所有文件

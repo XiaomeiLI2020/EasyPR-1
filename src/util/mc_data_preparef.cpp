@@ -128,7 +128,7 @@ bool getNewPath(const string& filepath, string& newfilepath)
     vector<string> spilt_path;
     SplitString(filepath, spilt_path, "\\");
     
-    int spiltsize = spilt_path.size();
+    int spiltsize = (int)spilt_path.size();
     string filename = "";
     if (spiltsize != 0)
     {
@@ -188,7 +188,7 @@ void getPlateLicense(const string& filepath, string& plateLicense)
 //! MC：将rawdata截取部分数据到learndata中
 void getLearnData()
 {
-    char * filePath = "F:/data/easypr-data/rawdata";
+    string filePath = "F:/data/easypr-data/rawdata";
     
     ////获取该路径下的所有文件
     vector<string> files;
@@ -240,13 +240,13 @@ void getLearnData()
 void changeFileName()
 {
     //char * filePath = "F:/data/easypr-data/learndata";
-    char * filePath = "F:/data/PlateLocate/pic1";
+    string filePath = "F:/data/PlateLocate/pic1";
     
     ////获取该路径下的所有文件
     vector<string> files;
     getFiles(filePath, files );
     
-    int size = files.size();
+    int size =(int) files.size();
     if (0 == size)
         cout << "No File Found in learndata!" << endl;
     

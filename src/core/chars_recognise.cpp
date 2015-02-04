@@ -27,7 +27,7 @@ namespace easypr{
         int result = m_charsSegment->charsSegment(plate, matVec);
         if (result == 0)
         {
-            int num = matVec.size();
+            int num =(int) matVec.size();
             for (int j = 0; j < num; j++)
             {
                 Mat charMat = matVec[j];

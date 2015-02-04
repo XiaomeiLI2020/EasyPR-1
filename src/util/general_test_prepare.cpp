@@ -65,7 +65,7 @@ int general_test()
 				vector<string> spilt_plate;
 				SplitString(colorplate, spilt_plate, ":");
 
-				int size = spilt_plate.size();
+				int size = (int)spilt_plate.size();
 				if (size == 2)
 				{
 					stringstream ss(stringstream::in | stringstream::out);
