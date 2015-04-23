@@ -9,7 +9,7 @@ namespace easypr{
 CPlateJudge::CPlateJudge()
 {
 	//cout << "CPlateJudge" << endl;
-	m_path = "/Users/zhoushiwei/Dropbox/EasyPR/model/svm.xml";
+	m_path = "model/svm.xml";
 	m_getFeatures = getHistogramFeatures;
 
 	LoadModel();
@@ -27,7 +27,7 @@ void CPlateJudge::LoadModel(string s)
 	svm.load(s.c_str(), "svm");
 }
 
-//! ç›´æ–¹å›¾å‡è¡¡
+//! Ö±·½Í¼¾ùºâ
 Mat CPlateJudge::histeq(Mat in)
 {
 	Mat out(in.size(), in.type());
@@ -49,7 +49,7 @@ Mat CPlateJudge::histeq(Mat in)
 }
 
 
-//! å¯¹å•å¹…å›¾åƒè¿›è¡ŒSVMåˆ¤æ–­
+//! ¶Ôµ¥·ùÍ¼Ïñ½øÐÐSVMÅÐ¶Ï
 int CPlateJudge::plateJudge(const Mat& inMat,int& result)
 {
 	if (m_getFeatures == NULL)
@@ -58,31 +58,66 @@ int CPlateJudge::plateJudge(const Mat& inMat,int& result)
 	Mat features;
 	m_getFeatures(inMat, features);
 
-	//é€šè¿‡ç›´æ–¹å›¾å‡è¡¡åŒ–åŽçš„å½©è‰²å›¾è¿›è¡Œé¢„æµ‹
+	//Í¨¹ýÖ±·½Í¼¾ùºâ»¯ºóµÄ²ÊÉ«Í¼½øÐÐÔ¤²â
 	Mat p = features.reshape(1, 1);
 	p.convertTo(p, CV_32FC1);
 
-	int response = (int)svm.predict(p);
+	float response = svm.predict(p);
 	result = response;
 
 	return 0;
 }
 
 
-//! å¯¹å¤šå¹…å›¾åƒè¿›è¡ŒSVMåˆ¤æ–­
+//! ¶Ô¶à·ùÍ¼Ïñ½øÐÐSVMÅÐ¶Ï
 int CPlateJudge::plateJudge(const vector<Mat>& inVec,
 								  vector<Mat>& resultVec)
 {
-	int num = (int)inVec.size();
+	int num = inVec.size();
 	for (int j = 0; j < num; j++)
 	{
 		Mat inMat = inVec[j];
-
+		
 		int response = -1;
 		plateJudge(inMat, response);
 
 		if (response == 1)
 			resultVec.push_back(inMat);
+	}
+	return 0;
+}
+
+//! ¶Ô¶à·ù³µÅÆ½øÐÐSVMÅÐ¶Ï
+int CPlateJudge::plateJudge(const vector<CPlate>& inVec,
+	vector<CPlate>& resultVec)
+{
+	int num = inVec.size();
+	for (int j = 0; j < num; j++)
+	{
+		CPlate inPlate = inVec[j];
+		Mat inMat = inPlate.getPlateMat();
+
+		int response = -1;
+		plateJudge(inMat, response);
+
+		if (response == 1)
+			resultVec.push_back(inPlate);
+		else
+		{
+			int w = inMat.cols;
+			int h = inMat.rows;
+			//ÔÙÈ¡ÖÐ¼ä²¿·ÖÅÐ¶ÏÒ»´Î
+			Mat tmpmat = inMat(Rect(w*0.05,h*0.1,w*0.9,h*0.8));
+			Mat tmpDes = inMat.clone();
+			resize(tmpmat,tmpDes,Size(inMat.size()));
+			
+			plateJudge(tmpDes, response);
+
+			if (response == 1)
+				resultVec.push_back(inPlate);
+		}
+
+		//resultVec.push_back(inPlate);
 	}
 	return 0;
 }

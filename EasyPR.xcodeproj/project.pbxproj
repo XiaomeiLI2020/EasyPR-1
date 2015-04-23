@@ -7,25 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53CB66C41A7BEE97007B7FEB /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66C31A7BEE97007B7FEB /* test.cpp */; };
-		53CB66F31A7C8C09007B7FEB /* chars_identify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66F21A7C8C09007B7FEB /* chars_identify.cpp */; };
-		53CB66F81A7C9082007B7FEB /* accuracy_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66F71A7C9082007B7FEB /* accuracy_test.cpp */; };
-		53CB66FA1A7C90B3007B7FEB /* chars_recognise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66F91A7C90B3007B7FEB /* chars_recognise.cpp */; };
-		53CB66FC1A7C9294007B7FEB /* mc_data_preparef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53CB66FB1A7C9294007B7FEB /* mc_data_preparef.cpp */; };
-		53EBCD271A7B58CF002F67C1 /* chars_segment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD061A7B58CF002F67C1 /* chars_segment.cpp */; };
-		53EBCD281A7B58CF002F67C1 /* features.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD071A7B58CF002F67C1 /* features.cpp */; };
-		53EBCD291A7B58CF002F67C1 /* plate_detect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD081A7B58CF002F67C1 /* plate_detect.cpp */; };
-		53EBCD2A1A7B58CF002F67C1 /* plate_judge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD091A7B58CF002F67C1 /* plate_judge.cpp */; };
-		53EBCD2B1A7B58CF002F67C1 /* plate_locate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD0A1A7B58CF002F67C1 /* plate_locate.cpp */; };
-		53EBCD2C1A7B58CF002F67C1 /* plate_recognize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD0B1A7B58CF002F67C1 /* plate_recognize.cpp */; };
-		53EBCD2D1A7B58CF002F67C1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD171A7B58CF002F67C1 /* main.cpp */; };
-		53EBCD301A7B58CF002F67C1 /* ann_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1C1A7B58CF002F67C1 /* ann_train.cpp */; };
-		53EBCD311A7B58CF002F67C1 /* svm_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1D1A7B58CF002F67C1 /* svm_train.cpp */; };
-		53EBCD321A7B58CF002F67C1 /* deface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1F1A7B58CF002F67C1 /* deface.cpp */; };
-		53EBCD331A7B58CF002F67C1 /* general_test_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD201A7B58CF002F67C1 /* general_test_prepare.cpp */; };
-		53EBCD341A7B58CF002F67C1 /* generate_gdts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD211A7B58CF002F67C1 /* generate_gdts.cpp */; };
-		53EBCD351A7B58CF002F67C1 /* learn_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD221A7B58CF002F67C1 /* learn_prepare.cpp */; };
-		53EBCD371A7B58CF002F67C1 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD241A7B58CF002F67C1 /* util.cpp */; };
+		535238611AE7E7560023BB4E /* chars_identify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383A1AE7E7550023BB4E /* chars_identify.cpp */; };
+		535238621AE7E7560023BB4E /* chars_recognise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383B1AE7E7550023BB4E /* chars_recognise.cpp */; };
+		535238631AE7E7560023BB4E /* chars_segment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383C1AE7E7550023BB4E /* chars_segment.cpp */; };
+		535238641AE7E7560023BB4E /* core_func.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383D1AE7E7550023BB4E /* core_func.cpp */; };
+		535238651AE7E7560023BB4E /* feature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383E1AE7E7550023BB4E /* feature.cpp */; };
+		535238661AE7E7560023BB4E /* plate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383F1AE7E7550023BB4E /* plate.cpp */; };
+		535238671AE7E7560023BB4E /* plate_detect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238401AE7E7550023BB4E /* plate_detect.cpp */; };
+		535238681AE7E7560023BB4E /* plate_judge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238411AE7E7550023BB4E /* plate_judge.cpp */; };
+		535238691AE7E7560023BB4E /* plate_locate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238421AE7E7550023BB4E /* plate_locate.cpp */; };
+		5352386A1AE7E7560023BB4E /* plate_recognize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238431AE7E7550023BB4E /* plate_recognize.cpp */; };
+		5352386B1AE7E7560023BB4E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238521AE7E7550023BB4E /* main.cpp */; };
+		5352386C1AE7E7560023BB4E /* accuracy_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238541AE7E7560023BB4E /* accuracy_test.cpp */; };
+		5352386D1AE7E7560023BB4E /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238551AE7E7560023BB4E /* test.cpp */; };
+		5352386E1AE7E7560023BB4E /* ann_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238571AE7E7560023BB4E /* ann_train.cpp */; };
+		5352386F1AE7E7560023BB4E /* svm_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238581AE7E7560023BB4E /* svm_train.cpp */; };
+		535238701AE7E7560023BB4E /* CParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385A1AE7E7560023BB4E /* CParser.cpp */; };
+		535238711AE7E7560023BB4E /* deface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385B1AE7E7560023BB4E /* deface.cpp */; };
+		535238721AE7E7560023BB4E /* general_test_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385C1AE7E7560023BB4E /* general_test_prepare.cpp */; };
+		535238731AE7E7560023BB4E /* generate_gdts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385D1AE7E7560023BB4E /* generate_gdts.cpp */; };
+		535238741AE7E7560023BB4E /* learn_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385E1AE7E7560023BB4E /* learn_prepare.cpp */; };
+		535238751AE7E7560023BB4E /* mc_data_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385F1AE7E7560023BB4E /* mc_data_prepare.cpp */; };
+		535238761AE7E7560023BB4E /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238601AE7E7560023BB4E /* util.cpp */; };
 		53EBCE001A7B593A002F67C1 /* libopencv_calib3d.2.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBCDEF1A7B593A002F67C1 /* libopencv_calib3d.2.4.8.dylib */; };
 		53EBCE011A7B593A002F67C1 /* libopencv_contrib.2.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBCDF01A7B593A002F67C1 /* libopencv_contrib.2.4.8.dylib */; };
 		53EBCE021A7B593A002F67C1 /* libopencv_core.2.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBCDF11A7B593A002F67C1 /* libopencv_core.2.4.8.dylib */; };
@@ -58,36 +61,42 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		53CB66C31A7BEE97007B7FEB /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
-		53CB66F21A7C8C09007B7FEB /* chars_identify.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_identify.cpp; sourceTree = "<group>"; };
-		53CB66F41A7C8E5B007B7FEB /* chars_recognise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_recognise.h; sourceTree = "<group>"; };
-		53CB66F71A7C9082007B7FEB /* accuracy_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = accuracy_test.cpp; sourceTree = "<group>"; };
-		53CB66F91A7C90B3007B7FEB /* chars_recognise.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_recognise.cpp; sourceTree = "<group>"; };
-		53CB66FB1A7C9294007B7FEB /* mc_data_preparef.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mc_data_preparef.cpp; sourceTree = "<group>"; };
+		5352383A1AE7E7550023BB4E /* chars_identify.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = chars_identify.cpp; sourceTree = "<group>"; };
+		5352383B1AE7E7550023BB4E /* chars_recognise.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = chars_recognise.cpp; sourceTree = "<group>"; };
+		5352383C1AE7E7550023BB4E /* chars_segment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_segment.cpp; sourceTree = "<group>"; };
+		5352383D1AE7E7550023BB4E /* core_func.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = core_func.cpp; sourceTree = "<group>"; };
+		5352383E1AE7E7550023BB4E /* feature.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = feature.cpp; sourceTree = "<group>"; };
+		5352383F1AE7E7550023BB4E /* plate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate.cpp; sourceTree = "<group>"; };
+		535238401AE7E7550023BB4E /* plate_detect.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = plate_detect.cpp; sourceTree = "<group>"; };
+		535238411AE7E7550023BB4E /* plate_judge.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = plate_judge.cpp; sourceTree = "<group>"; };
+		535238421AE7E7550023BB4E /* plate_locate.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = plate_locate.cpp; sourceTree = "<group>"; };
+		535238431AE7E7550023BB4E /* plate_recognize.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = plate_recognize.cpp; sourceTree = "<group>"; };
+		535238451AE7E7550023BB4E /* chars_identify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_identify.h; sourceTree = "<group>"; };
+		535238461AE7E7550023BB4E /* chars_recognise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_recognise.h; sourceTree = "<group>"; };
+		535238471AE7E7550023BB4E /* chars_segment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_segment.h; sourceTree = "<group>"; };
+		535238481AE7E7550023BB4E /* core_func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core_func.h; sourceTree = "<group>"; };
+		535238491AE7E7550023BB4E /* CParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CParser.h; sourceTree = "<group>"; };
+		5352384A1AE7E7550023BB4E /* feature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feature.h; sourceTree = "<group>"; };
+		5352384B1AE7E7550023BB4E /* plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate.h; sourceTree = "<group>"; };
+		5352384C1AE7E7550023BB4E /* plate_detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_detect.h; sourceTree = "<group>"; };
+		5352384D1AE7E7550023BB4E /* plate_judge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_judge.h; sourceTree = "<group>"; };
+		5352384E1AE7E7550023BB4E /* plate_locate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_locate.h; sourceTree = "<group>"; };
+		5352384F1AE7E7550023BB4E /* plate_recognize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_recognize.h; sourceTree = "<group>"; };
+		535238501AE7E7550023BB4E /* prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prep.h; sourceTree = "<group>"; };
+		535238511AE7E7550023BB4E /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		535238521AE7E7550023BB4E /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		535238541AE7E7560023BB4E /* accuracy_test.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = accuracy_test.cpp; sourceTree = "<group>"; };
+		535238551AE7E7560023BB4E /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		535238571AE7E7560023BB4E /* ann_train.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = ann_train.cpp; sourceTree = "<group>"; };
+		535238581AE7E7560023BB4E /* svm_train.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = svm_train.cpp; sourceTree = "<group>"; };
+		5352385A1AE7E7560023BB4E /* CParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CParser.cpp; sourceTree = "<group>"; };
+		5352385B1AE7E7560023BB4E /* deface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deface.cpp; sourceTree = "<group>"; };
+		5352385C1AE7E7560023BB4E /* general_test_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = general_test_prepare.cpp; sourceTree = "<group>"; };
+		5352385D1AE7E7560023BB4E /* generate_gdts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = generate_gdts.cpp; sourceTree = "<group>"; };
+		5352385E1AE7E7560023BB4E /* learn_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = learn_prepare.cpp; sourceTree = "<group>"; };
+		5352385F1AE7E7560023BB4E /* mc_data_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mc_data_prepare.cpp; sourceTree = "<group>"; };
+		535238601AE7E7560023BB4E /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
 		53E6E8CF1A7748F80044931C /* EasyPR */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyPR; sourceTree = BUILT_PRODUCTS_DIR; };
-		53EBCD061A7B58CF002F67C1 /* chars_segment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_segment.cpp; sourceTree = "<group>"; };
-		53EBCD071A7B58CF002F67C1 /* features.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = features.cpp; sourceTree = "<group>"; };
-		53EBCD081A7B58CF002F67C1 /* plate_detect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_detect.cpp; sourceTree = "<group>"; };
-		53EBCD091A7B58CF002F67C1 /* plate_judge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_judge.cpp; sourceTree = "<group>"; };
-		53EBCD0A1A7B58CF002F67C1 /* plate_locate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_locate.cpp; sourceTree = "<group>"; };
-		53EBCD0B1A7B58CF002F67C1 /* plate_recognize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_recognize.cpp; sourceTree = "<group>"; };
-		53EBCD0D1A7B58CF002F67C1 /* chars_identify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_identify.h; sourceTree = "<group>"; };
-		53EBCD0F1A7B58CF002F67C1 /* chars_segment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_segment.h; sourceTree = "<group>"; };
-		53EBCD101A7B58CF002F67C1 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
-		53EBCD111A7B58CF002F67C1 /* plate_detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_detect.h; sourceTree = "<group>"; };
-		53EBCD121A7B58CF002F67C1 /* plate_judge.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = plate_judge.h; sourceTree = "<group>"; };
-		53EBCD131A7B58CF002F67C1 /* plate_locate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_locate.h; sourceTree = "<group>"; };
-		53EBCD141A7B58CF002F67C1 /* plate_recognize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_recognize.h; sourceTree = "<group>"; };
-		53EBCD151A7B58CF002F67C1 /* prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prep.h; sourceTree = "<group>"; };
-		53EBCD161A7B58CF002F67C1 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
-		53EBCD171A7B58CF002F67C1 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		53EBCD1C1A7B58CF002F67C1 /* ann_train.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = ann_train.cpp; sourceTree = "<group>"; };
-		53EBCD1D1A7B58CF002F67C1 /* svm_train.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = svm_train.cpp; sourceTree = "<group>"; };
-		53EBCD1F1A7B58CF002F67C1 /* deface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deface.cpp; sourceTree = "<group>"; };
-		53EBCD201A7B58CF002F67C1 /* general_test_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = general_test_prepare.cpp; sourceTree = "<group>"; };
-		53EBCD211A7B58CF002F67C1 /* generate_gdts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = generate_gdts.cpp; sourceTree = "<group>"; };
-		53EBCD221A7B58CF002F67C1 /* learn_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = learn_prepare.cpp; sourceTree = "<group>"; };
-		53EBCD241A7B58CF002F67C1 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
 		53EBCDEF1A7B593A002F67C1 /* libopencv_calib3d.2.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_calib3d.2.4.8.dylib; sourceTree = "<group>"; };
 		53EBCDF01A7B593A002F67C1 /* libopencv_contrib.2.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_contrib.2.4.8.dylib; sourceTree = "<group>"; };
 		53EBCDF11A7B593A002F67C1 /* libopencv_core.2.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_core.2.4.8.dylib; sourceTree = "<group>"; };
@@ -135,9 +144,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		535238381AE7E7550023BB4E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				535238391AE7E7550023BB4E /* core */,
+				535238441AE7E7550023BB4E /* include */,
+				535238521AE7E7550023BB4E /* main.cpp */,
+				535238531AE7E7550023BB4E /* test */,
+				535238561AE7E7560023BB4E /* train */,
+				535238591AE7E7560023BB4E /* util */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		535238391AE7E7550023BB4E /* core */ = {
+			isa = PBXGroup;
+			children = (
+				5352383A1AE7E7550023BB4E /* chars_identify.cpp */,
+				5352383B1AE7E7550023BB4E /* chars_recognise.cpp */,
+				5352383C1AE7E7550023BB4E /* chars_segment.cpp */,
+				5352383D1AE7E7550023BB4E /* core_func.cpp */,
+				5352383E1AE7E7550023BB4E /* feature.cpp */,
+				5352383F1AE7E7550023BB4E /* plate.cpp */,
+				535238401AE7E7550023BB4E /* plate_detect.cpp */,
+				535238411AE7E7550023BB4E /* plate_judge.cpp */,
+				535238421AE7E7550023BB4E /* plate_locate.cpp */,
+				535238431AE7E7550023BB4E /* plate_recognize.cpp */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		535238441AE7E7550023BB4E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				535238451AE7E7550023BB4E /* chars_identify.h */,
+				535238461AE7E7550023BB4E /* chars_recognise.h */,
+				535238471AE7E7550023BB4E /* chars_segment.h */,
+				535238481AE7E7550023BB4E /* core_func.h */,
+				535238491AE7E7550023BB4E /* CParser.h */,
+				5352384A1AE7E7550023BB4E /* feature.h */,
+				5352384B1AE7E7550023BB4E /* plate.h */,
+				5352384C1AE7E7550023BB4E /* plate_detect.h */,
+				5352384D1AE7E7550023BB4E /* plate_judge.h */,
+				5352384E1AE7E7550023BB4E /* plate_locate.h */,
+				5352384F1AE7E7550023BB4E /* plate_recognize.h */,
+				535238501AE7E7550023BB4E /* prep.h */,
+				535238511AE7E7550023BB4E /* util.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		535238531AE7E7550023BB4E /* test */ = {
+			isa = PBXGroup;
+			children = (
+				535238541AE7E7560023BB4E /* accuracy_test.cpp */,
+				535238551AE7E7560023BB4E /* test.cpp */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		535238561AE7E7560023BB4E /* train */ = {
+			isa = PBXGroup;
+			children = (
+				535238571AE7E7560023BB4E /* ann_train.cpp */,
+				535238581AE7E7560023BB4E /* svm_train.cpp */,
+			);
+			path = train;
+			sourceTree = "<group>";
+		};
+		535238591AE7E7560023BB4E /* util */ = {
+			isa = PBXGroup;
+			children = (
+				5352385A1AE7E7560023BB4E /* CParser.cpp */,
+				5352385B1AE7E7560023BB4E /* deface.cpp */,
+				5352385C1AE7E7560023BB4E /* general_test_prepare.cpp */,
+				5352385D1AE7E7560023BB4E /* generate_gdts.cpp */,
+				5352385E1AE7E7560023BB4E /* learn_prepare.cpp */,
+				5352385F1AE7E7560023BB4E /* mc_data_prepare.cpp */,
+				535238601AE7E7560023BB4E /* util.cpp */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		53E6E8C61A7748F80044931C = {
 			isa = PBXGroup;
 			children = (
+				535238381AE7E7550023BB4E /* src */,
 				53EBCDEE1A7B593A002F67C1 /* lib */,
 				53E6E8D11A7748F80044931C /* EasyPR */,
 				53E6E8D01A7748F80044931C /* Products */,
@@ -155,85 +247,8 @@
 		53E6E8D11A7748F80044931C /* EasyPR */ = {
 			isa = PBXGroup;
 			children = (
-				53EBCD021A7B58CF002F67C1 /* src */,
 			);
 			path = EasyPR;
-			sourceTree = "<group>";
-		};
-		53EBCD021A7B58CF002F67C1 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				53EBCD031A7B58CF002F67C1 /* core */,
-				53EBCD0C1A7B58CF002F67C1 /* include */,
-				53EBCD171A7B58CF002F67C1 /* main.cpp */,
-				53EBCD181A7B58CF002F67C1 /* test */,
-				53EBCD1B1A7B58CF002F67C1 /* train */,
-				53EBCD1E1A7B58CF002F67C1 /* util */,
-			);
-			path = src;
-			sourceTree = SOURCE_ROOT;
-		};
-		53EBCD031A7B58CF002F67C1 /* core */ = {
-			isa = PBXGroup;
-			children = (
-				53EBCD061A7B58CF002F67C1 /* chars_segment.cpp */,
-				53CB66F91A7C90B3007B7FEB /* chars_recognise.cpp */,
-				53CB66F21A7C8C09007B7FEB /* chars_identify.cpp */,
-				53EBCD071A7B58CF002F67C1 /* features.cpp */,
-				53EBCD081A7B58CF002F67C1 /* plate_detect.cpp */,
-				53EBCD091A7B58CF002F67C1 /* plate_judge.cpp */,
-				53EBCD0A1A7B58CF002F67C1 /* plate_locate.cpp */,
-				53EBCD0B1A7B58CF002F67C1 /* plate_recognize.cpp */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
-		53EBCD0C1A7B58CF002F67C1 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				53EBCD0D1A7B58CF002F67C1 /* chars_identify.h */,
-				53CB66F41A7C8E5B007B7FEB /* chars_recognise.h */,
-				53EBCD0F1A7B58CF002F67C1 /* chars_segment.h */,
-				53EBCD101A7B58CF002F67C1 /* features.h */,
-				53EBCD111A7B58CF002F67C1 /* plate_detect.h */,
-				53EBCD121A7B58CF002F67C1 /* plate_judge.h */,
-				53EBCD131A7B58CF002F67C1 /* plate_locate.h */,
-				53EBCD141A7B58CF002F67C1 /* plate_recognize.h */,
-				53EBCD151A7B58CF002F67C1 /* prep.h */,
-				53EBCD161A7B58CF002F67C1 /* util.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		53EBCD181A7B58CF002F67C1 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				53CB66C31A7BEE97007B7FEB /* test.cpp */,
-				53CB66F71A7C9082007B7FEB /* accuracy_test.cpp */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
-		53EBCD1B1A7B58CF002F67C1 /* train */ = {
-			isa = PBXGroup;
-			children = (
-				53EBCD1C1A7B58CF002F67C1 /* ann_train.cpp */,
-				53EBCD1D1A7B58CF002F67C1 /* svm_train.cpp */,
-			);
-			path = train;
-			sourceTree = "<group>";
-		};
-		53EBCD1E1A7B58CF002F67C1 /* util */ = {
-			isa = PBXGroup;
-			children = (
-				53EBCD1F1A7B58CF002F67C1 /* deface.cpp */,
-				53EBCD201A7B58CF002F67C1 /* general_test_prepare.cpp */,
-				53EBCD211A7B58CF002F67C1 /* generate_gdts.cpp */,
-				53EBCD221A7B58CF002F67C1 /* learn_prepare.cpp */,
-				53CB66FB1A7C9294007B7FEB /* mc_data_preparef.cpp */,
-				53EBCD241A7B58CF002F67C1 /* util.cpp */,
-			);
-			path = util;
 			sourceTree = "<group>";
 		};
 		53EBCDEE1A7B593A002F67C1 /* lib */ = {
@@ -317,25 +332,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53CB66F81A7C9082007B7FEB /* accuracy_test.cpp in Sources */,
-				53EBCD291A7B58CF002F67C1 /* plate_detect.cpp in Sources */,
-				53EBCD321A7B58CF002F67C1 /* deface.cpp in Sources */,
-				53EBCD281A7B58CF002F67C1 /* features.cpp in Sources */,
-				53EBCD2D1A7B58CF002F67C1 /* main.cpp in Sources */,
-				53EBCD351A7B58CF002F67C1 /* learn_prepare.cpp in Sources */,
-				53EBCD2A1A7B58CF002F67C1 /* plate_judge.cpp in Sources */,
-				53EBCD2B1A7B58CF002F67C1 /* plate_locate.cpp in Sources */,
-				53EBCD271A7B58CF002F67C1 /* chars_segment.cpp in Sources */,
-				53EBCD301A7B58CF002F67C1 /* ann_train.cpp in Sources */,
-				53EBCD331A7B58CF002F67C1 /* general_test_prepare.cpp in Sources */,
-				53EBCD371A7B58CF002F67C1 /* util.cpp in Sources */,
-				53CB66C41A7BEE97007B7FEB /* test.cpp in Sources */,
-				53EBCD311A7B58CF002F67C1 /* svm_train.cpp in Sources */,
-				53CB66F31A7C8C09007B7FEB /* chars_identify.cpp in Sources */,
-				53EBCD341A7B58CF002F67C1 /* generate_gdts.cpp in Sources */,
-				53EBCD2C1A7B58CF002F67C1 /* plate_recognize.cpp in Sources */,
-				53CB66FA1A7C90B3007B7FEB /* chars_recognise.cpp in Sources */,
-				53CB66FC1A7C9294007B7FEB /* mc_data_preparef.cpp in Sources */,
+				535238731AE7E7560023BB4E /* generate_gdts.cpp in Sources */,
+				5352386E1AE7E7560023BB4E /* ann_train.cpp in Sources */,
+				535238631AE7E7560023BB4E /* chars_segment.cpp in Sources */,
+				535238611AE7E7560023BB4E /* chars_identify.cpp in Sources */,
+				535238661AE7E7560023BB4E /* plate.cpp in Sources */,
+				535238651AE7E7560023BB4E /* feature.cpp in Sources */,
+				535238741AE7E7560023BB4E /* learn_prepare.cpp in Sources */,
+				5352386C1AE7E7560023BB4E /* accuracy_test.cpp in Sources */,
+				5352386B1AE7E7560023BB4E /* main.cpp in Sources */,
+				535238681AE7E7560023BB4E /* plate_judge.cpp in Sources */,
+				535238641AE7E7560023BB4E /* core_func.cpp in Sources */,
+				535238621AE7E7560023BB4E /* chars_recognise.cpp in Sources */,
+				535238721AE7E7560023BB4E /* general_test_prepare.cpp in Sources */,
+				5352386D1AE7E7560023BB4E /* test.cpp in Sources */,
+				535238691AE7E7560023BB4E /* plate_locate.cpp in Sources */,
+				535238761AE7E7560023BB4E /* util.cpp in Sources */,
+				535238701AE7E7560023BB4E /* CParser.cpp in Sources */,
+				535238671AE7E7560023BB4E /* plate_detect.cpp in Sources */,
+				535238751AE7E7560023BB4E /* mc_data_prepare.cpp in Sources */,
+				5352386F1AE7E7560023BB4E /* svm_train.cpp in Sources */,
+				535238711AE7E7560023BB4E /* deface.cpp in Sources */,
+				5352386A1AE7E7560023BB4E /* plate_recognize.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +437,10 @@
 		53E6E8D71A7748F80044931C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/opencv/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/opencv/include\"",
+					"\"$(SRCROOT)\"",
+				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/opencv/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -428,7 +449,10 @@
 		53E6E8D81A7748F80044931C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/opencv/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/opencv/include\"",
+					"\"$(SRCROOT)\"",
+				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/opencv/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

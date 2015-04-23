@@ -1,58 +1,49 @@
-//
-//  main.cpp
-//  EasyPR
-//
-//  Created by zhoushiwei on 15/1/30.
-//  Copyright (c) 2015å¹´ zhoushiwei. All rights reserved.
-//
-
-//
-//  main.cpp
-//  EasyPR
-//
-//  Created by zhoushiwei on 15/1/27.
-//  Copyright (c) 2015å¹´ zhoushiwei. All rights reserved.
-//
 #include "include/plate_recognize.h"
 #include "include/util.h"
-#include "include/features.h"
+#include "include/feature.h"
+#include "include/CParser.h"
 
 using namespace easypr;
 
+int svmMain();
+int acurayTestMain();
+void cmdMain(int argc, char *argv[]);
 
 namespace easypr {
-    
+
     int svmTrain(bool dividePrepared = true, bool trainPrepared = true,
                  svmCallback getFeatures = getHistogramFeatures);
-    
+
 }
 
 extern const string GENERAL_TEST_PATH = "image/general_test";
 extern const string NATIVE_TEST_PATH = "image/native_test";
 
 ////////////////////////////////////////////////////////////
-// EasyPR è®­ç»ƒå‘½ä»¤è¡Œ
+// EasyPR ÑµÁ·ÃüÁîÐÐ
 
 const string option[] =
 {
-    "1. æµ‹è¯•;"	,
-    "2. æ‰¹é‡æµ‹è¯•;"		,
-    "3. SVMè®­ç»ƒ;"		,
-    "4. ANNè®­ç»ƒ(æœªå¼€æ”¾);"		,
-    "5. GDTSç”Ÿæˆ;"		,
-    "6. å¼€å‘å›¢é˜Ÿ;"		,
-    "7. æ„Ÿè°¢åå•;"		,
-    "8. é€€å‡º;"
+    "1. ²âÊÔ;"	,
+    "2. ÅúÁ¿²âÊÔ;"		,
+    "3. SVMÑµÁ·;"		,
+    "4. ANNÑµÁ·(Î´¿ª·Å);"		,
+    "5. GDTSÉú³É;"		,
+    "6. ¿ª·¢ÍÅ¶Ó;"		,
+    "7. ¸ÐÐ»Ãûµ¥;"		,
+    "8. ÍË³ö;"			,
 };
 
 const int optionCount = 8;
 
-int svmMain();
-int acurayTestMain();
-
-
-int main(int argc, const char **argv)
+int main(int argc, char *argv[])
 {
+    if (argc > 1) {
+        //enable command line option
+        cmdMain(argc, argv);
+        return 0;
+    }
+
     bool isExit = false;
     while (isExit != true)
     {
@@ -62,12 +53,12 @@ int main(int argc, const char **argv)
         {
             selectOption << option[i] << endl;
         }
-        
+
         cout << "////////////////////////////////////"<< endl;
         cout << selectOption.str();
         cout << "////////////////////////////////////"<< endl;
-        cout << "è¯·é€‰æ‹©ä¸€é¡¹æ“ä½œ:";
-        
+        cout << "ÇëÑ¡ÔñÒ»Ïî²Ù×÷:";
+
         int select = -1;
         bool isRepeat = true;
         while (isRepeat)
@@ -89,32 +80,32 @@ int main(int argc, const char **argv)
                     // TODO
                     break;
                 case 5:
+                    //general_test();
                     generate_gdts();
                     break;
                 case 6:
-                    // å¼€å‘å›¢é˜Ÿ;
+                    // ¿ª·¢ÍÅ¶Ó;
                     cout << endl;
-                    
-                    cout << "æˆ‘ä»¬EasyPRå›¢é˜Ÿç›®å‰æœ‰ä¸€ä¸ª5äººå·¦å³çš„å°ç»„åœ¨è¿›è¡ŒEasyPRåŽç»­ç‰ˆæœ¬çš„å¼€å‘å·¥ä½œã€‚" << endl;
-                    cout << "å¦‚æžœä½ å¯¹æœ¬é¡¹ç›®æ„Ÿå…´è¶£ï¼Œå¹¶ä¸”æ„¿æ„ä¸ºå¼€æºè´¡çŒ®ä¸€ä»½åŠ›é‡ï¼Œæˆ‘ä»¬å¾ˆæ¬¢è¿Žä½ çš„åŠ å…¥ã€‚" << endl;
-                    cout << "ç›®å‰æ‹›è˜çš„ä¸»è¦äººæ‰æ˜¯ï¼šè½¦ç‰Œå®šä½ï¼Œå›¾åƒè¯†åˆ«ï¼Œæ·±åº¦å­¦ä¹ ï¼Œç½‘ç«™å»ºè®¾ç›¸å…³æ–¹é¢çš„ç‰›äººã€‚" << endl;
-                    cout << "å¦‚æžœä½ è§‰å¾—è‡ªå·±ç¬¦åˆæ¡ä»¶ï¼Œè¯·å‘é‚®ä»¶åˆ°åœ°å€(easypr_dev@163.com)ï¼ŒæœŸå¾…ä½ çš„åŠ å…¥ï¼" << endl;
+                    cout << "ÎÒÃÇEasyPRÍÅ¶ÓÄ¿Ç°ÓÐÒ»¸ö5ÈË×óÓÒµÄÐ¡×éÔÚ½øÐÐEasyPRºóÐø°æ±¾µÄ¿ª·¢¹¤×÷¡£" << endl;
+                    cout << "Èç¹ûÄã¶Ô±¾ÏîÄ¿¸ÐÐËÈ¤£¬²¢ÇÒÔ¸ÒâÎª¿ªÔ´¹±Ï×Ò»·ÝÁ¦Á¿£¬ÎÒÃÇºÜ»¶Ó­ÄãµÄ¼ÓÈë¡£" << endl;
+                    cout << "Ä¿Ç°ÕÐÆ¸µÄÖ÷ÒªÈË²ÅÊÇ£º³µÅÆ¶¨Î»£¬Í¼ÏñÊ¶±ð£¬Éî¶ÈÑ§Ï°£¬ÍøÕ¾½¨ÉèÏà¹Ø·½ÃæµÄÅ£ÈË¡£" << endl;
+                    cout << "Èç¹ûÄã¾õµÃ×Ô¼º·ûºÏÌõ¼þ£¬Çë·¢ÓÊ¼þµ½µØÖ·(easypr_dev@163.com)£¬ÆÚ´ýÄãµÄ¼ÓÈë£¡" << endl;
                     cout << endl;
                     break;
                 case 7:
-                    // æ„Ÿè°¢åå•
+                    // ¸ÐÐ»Ãûµ¥
                     cout << endl;
-                    cout << "æœ¬é¡¹ç›®åœ¨å»ºè®¾è¿‡ç¨‹ä¸­ï¼Œå—åˆ°äº†å¾ˆå¤šäººçš„å¸®åŠ©ï¼Œå…¶ä¸­ä»¥ä¸‹æ˜¯å¯¹æœ¬é¡¹ç›®åšå‡ºçªå‡ºè´¡çŒ®çš„" << endl;
-                    cout << "(è´¡çŒ®åŒ…æ‹¬æœ‰ç›Šå»ºè®®ï¼Œä»£ç è°ƒä¼˜ï¼Œæ•°æ®æä¾›ç­‰ç­‰,æŽ’åæŒ‰æ—¶é—´é¡ºåº)ï¼š" << endl;
-                    cout << "taotao1233, å”å¤§ä¾ ï¼Œjsxyheluï¼Œå¦‚æžœæœ‰ä¸€å¤©ï¼Œå­¦ä¹ å¥‹æ–—ï¼Œè¢æ‰¿å¿—ï¼Œåœ£åŸŽå°çŸ³åŒ ï¼Œ" << endl;
-                    cout << "è¿˜æœ‰å¾ˆå¤šçš„åŒå­¦å¯¹æœ¬é¡¹ç›®ä¹Ÿç»™äºˆäº†é¼“åŠ±ä¸Žæ”¯æŒï¼Œåœ¨æ­¤ä¹Ÿä¸€å¹¶è¡¨ç¤ºçœŸè¯šçš„è°¢æ„ï¼" << endl;
+                    cout << "±¾ÏîÄ¿ÔÚ½¨Éè¹ý³ÌÖÐ£¬ÊÜµ½ÁËºÜ¶àÈËµÄ°ïÖú£¬ÆäÖÐÒÔÏÂÊÇ¶Ô±¾ÏîÄ¿×ö³öÍ»³ö¹±Ï×µÄ" << endl;
+                    cout << "(¹±Ï×°üÀ¨ÓÐÒæ½¨Òé£¬´úÂëµ÷ÓÅ£¬Êý¾ÝÌá¹©µÈµÈ,ÅÅÃû°´Ê±¼äË³Ðò)£º" << endl;
+                    cout << "taotao1233£¬Çñ½õÉ½£¬ÌÆ´óÏÀ£¬jsxyhelu£¬Èç¹ûÓÐÒ»Ìì(zhoushiwei)£¬Ñ§Ï°·Ü¶·£¬Ô¬³ÐÖ¾£¬Ê¥³ÇÐ¡Ê¯½³£¬goldriver£¬Micooz£¬ÃÎÀïÊ±¹â£¬Rain Wang£¬ahccoms£¬ÐÇÒ¹Âä³¾£¬º£ëà¸Â¸Â" << endl;
+                    cout << "»¹ÓÐºÜ¶àµÄÍ¬Ñ§¶Ô±¾ÏîÄ¿Ò²¸øÓèÁË¹ÄÀøÓëÖ§³Ö£¬ÔÚ´ËÒ²Ò»²¢±íÊ¾Õæ³ÏµÄÐ»Òâ£¡" << endl;
                     cout << endl;
                     break;
                 case 8:
                     isExit = true;
                     break;
                 default:
-                    cout << "è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥:";
+                    cout << "ÊäÈë´íÎó£¬ÇëÖØÐÂÊäÈë:";
                     isRepeat = true;
                     break;
             }
@@ -122,18 +113,18 @@ int main(int argc, const char **argv)
     }
     return 0;
 }
-// /EasyPR è®­ç»ƒå‘½ä»¤è¡Œ ç»“æŸ
+// /EasyPR ÑµÁ·ÃüÁîÐÐ ½áÊø
 ////////////////////////////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////
-// acurayTestMain å‘½ä»¤è¡Œ
+// acurayTestMain ÃüÁîÐÐ
 
 const string acuray_option[] =
 {
     "1. general_test;"	,
     "2. native_test;"	,
-    "3. è¿”å›ž;"			,
+    "3. ·µ»Ø;"			,
 };
 
 const int acuray_optionCount = 3;
@@ -149,12 +140,12 @@ int acurayTestMain()
         {
             selectOption << acuray_option[i] << endl;
         }
-        
+
         cout << "////////////////////////////////////"<< endl;
         cout << selectOption.str();
         cout << "////////////////////////////////////"<< endl;
-        cout << "è¯·é€‰æ‹©ä¸€é¡¹æ“ä½œ:";
-        
+        cout << "ÇëÑ¡ÔñÒ»Ïî²Ù×÷:";
+
         int select = -1;
         bool isRepeat = true;
         while (isRepeat)
@@ -173,7 +164,7 @@ int acurayTestMain()
                     isExit = true;
                     break;
                 default:
-                    cout << "è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥:";
+                    cout << "ÊäÈë´íÎó£¬ÇëÖØÐÂÊäÈë:";
                     isRepeat = true;
                     break;
             }
@@ -182,22 +173,22 @@ int acurayTestMain()
     return 0;
 }
 
-// acurayTestMain å‘½ä»¤è¡Œ
+// acurayTestMain ÃüÁîÐÐ
 ////////////////////////////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////
-// SVM è®­ç»ƒå‘½ä»¤è¡Œ
+// SVM ÑµÁ·ÃüÁîÐÐ
 
 const string svm_option[] =
 {
-    "1. ç”Ÿæˆlearndata(è°ƒæ•´ä»£ç åˆ°ä½ çš„çŽ¯å¢ƒåŽå†ç”¨);"	,
-    "2. æ ‡ç­¾learndata;"		,
-    "3. è½¦ç‰Œæ£€æµ‹(not divide and train);"		,
-    "4. è½¦ç‰Œæ£€æµ‹(not train);"		,
-    "5. è½¦ç‰Œæ£€æµ‹(not divide);"		,
-    "6. è½¦ç‰Œæ£€æµ‹;"		,
-    "7. è¿”å›ž;"			,  
+    "1. Éú³Élearndata(µ÷Õû´úÂëµ½ÄãµÄ»·¾³ºóÔÙÓÃ);"	,
+    "2. ±êÇ©learndata;"		,
+    "3. ³µÅÆ¼ì²â(not divide and train);"		,
+    "4. ³µÅÆ¼ì²â(not train);"		,
+    "5. ³µÅÆ¼ì²â(not divide);"		,
+    "6. ³µÅÆ¼ì²â;"		,
+    "7. ·µ»Ø;"			,
 };
 
 const int svm_optionCount = 7;
@@ -213,12 +204,12 @@ int svmMain()
         {
             selectOption << svm_option[i] << endl;
         }
-        
+
         cout << "////////////////////////////////////"<< endl;
         cout << selectOption.str();
         cout << "////////////////////////////////////"<< endl;
-        cout << "è¯·é€‰æ‹©ä¸€é¡¹æ“ä½œ:";
-        
+        cout << "ÇëÑ¡ÔñÒ»Ïî²Ù×÷:";
+
         int select = -1;
         bool isRepeat = true;
         while (isRepeat)
@@ -249,7 +240,7 @@ int svmMain()
                     isExit = true;
                     break;
                 default:
-                    cout << "è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥:";
+                    cout << "ÊäÈë´íÎó£¬ÇëÖØÐÂÊäÈë:";
                     isRepeat = true;
                     break;
             }
@@ -258,5 +249,185 @@ int svmMain()
     return 0;
 }
 
-// SVM è®­ç»ƒå‘½ä»¤è¡Œ 
+// SVM ÑµÁ·ÃüÁîÐÐ
 ////////////////////////////////////////////////////////////
+
+// command line option support
+
+// the function declaration to be used,
+// owing to the modules of the current EasyPR is separated, this is only temporary.
+
+int test_plate_locate();
+int test_plate_judge();
+int test_chars_segment();
+int test_chars_identify();
+int test_plate_detect();
+int test_chars_recognise();
+int test_plate_recognize();
+
+void cmdMain(int argc, char *argv[])
+{
+    const char *help[] = {
+        "EasyPR Usage:                                             ",
+        "--help                 [ -h   ]    ÏÔÊ¾°ïÖú                ",
+        "²âÊÔÄ£¿é                                                   ",
+        "--test_plate_locate    [ -tpl ]    ³µÅÆ¶¨Î»                ",
+        "--test_plate_judge     [ -tpj ]    ³µÅÆÅÐ¶Ï                ",
+        "--test_plate_detect    [ -tpd ]    ³µÅÆ¼ì²â                ",
+        "--test_chars_segment   [ -tcs ]    ×Ö·û·Ö¸ô                ",
+        "--test_chars_identify  [ -tci ]    ×Ö·û¼ø±ð                ",
+        "--test_chars_recognize [ -tcr ]    ×Ö·ûÊ¶±ð                ",
+        "--test_plate_recognize [ -tpr ]    ³µÅÆÊ¶±ð                ",
+        "--test_all             [ -ta  ]    ²âÊÔÈ«²¿                ",
+        "--general_test         [ -gt  ]    ÅúÁ¿²âÊÔ-general_test   ",
+        "--native_test          [ -nt  ]    ÅúÁ¿²âÊÔ-native_test    ",
+        "SVMÑµÁ·",
+        "--svm_gen_learndata    [ -sgl ]    Éú³ÉLearndata           ",
+        "--svm_tag_learndata    [ -stl ]    ±êÇ©Learndata           ",
+        "--svm_detect           [ -sd  ]    ³µÅÆ¼ì²â£¬¿ÉÉèÖÃ-v»ò-t    ",
+        "--svm_divide           [ -v   ]    ÆôÓÃ·Ö¸î                ",
+        "--svm_train            [ -t   ]    ÆôÓÃÑµÁ·                ",
+        "ANNÑµÁ·£¨Î´¿ª·Å£©                                           ",
+        "GDTSÉú³É                                                   ",
+        "--gdts                 [ -gts  ]   GDTSÉú³É                ",
+        "--group                            ¿ª·¢ÍÅ¶Ó                ",
+        "--thanks                           ¸ÐÐ»Ãûµ¥                ",
+        "                                                          ",
+        "Examples:                                                 ",
+        "   $ ./EasyPR --test_plate_locate                         ",
+        "Will do the same as followings:                           ",
+        "   $ ./EasyPR -tpl                                        ",
+        "   $ ./EasyPR -t -p -l                                    ",
+        "   $ ./EasyPR -ptl                                        ",
+        "   $ ./EasyPR -p -l -t                                    ",
+        NULL
+    };
+
+    CParser parser(argc, argv);
+
+    try {
+
+        do {
+            if (parser.has_or(2, "help", "h") /* || argc < 2 */) {
+                int i = 0;
+                while (help[i]) {
+                    cout << help[i++] << endl;
+                }
+                break;
+            }
+
+            // tests
+
+            if (parser.has_or(2, "test_plate_locate", "-tpl")) {
+                cout << (test_plate_locate() == 0 ? "passed" : "failed");
+                break;
+            }
+
+            if (parser.has_or(2, "test_plate_judge", "-tpj")) {
+                cout << (test_plate_judge() == 0 ? "passed" : "failed");
+                break;
+            }
+
+            if (parser.has_or(2, "test_plate_detect", "-tpd")) {
+                cout << (test_plate_detect() == 0 ? "passed" : "failed");
+                break;
+            }
+
+            if (parser.has_or(2, "test_chars_segment", "-tcs")) {
+                cout << (test_chars_segment() == 0 ? "passed" : "failed");
+                break;
+            }
+
+            if (parser.has_or(2, "test_chars_identify", "-tci")) {
+                cout << (test_chars_identify() == 0 ? "passed" : "failed");
+                break;
+            }
+
+            if (parser.has_or(2, "test_chars_recognize", "-tcr")) {
+                cout << (test_chars_recognise() == 0 ? "passed" : "failed");
+                break;
+            }
+
+            if (parser.has_or(2, "test_plate_recognize", "-tpr")) {
+                cout << (test_plate_recognize() == 0 ? "passed" : "failed");
+                break;
+            }
+
+            if (parser.has_or(2, "test_all", "-ta")) {
+                cout << "test_plate_locate "    << (test_plate_locate()    == 0 ? "passed" : "failed") << endl;
+                cout << "test_plate_judge "     << (test_plate_judge()     == 0 ? "passed" : "failed") << endl;
+                cout << "test_chars_segment "   << (test_chars_segment()   == 0 ? "passed" : "failed") << endl;
+                cout << "test_chars_identify "  << (test_chars_identify()  == 0 ? "passed" : "failed") << endl;
+                cout << "test_plate_detect "    << (test_plate_detect()    == 0 ? "passed" : "failed") << endl;
+                cout << "test_chars_recognize " << (test_chars_recognise() == 0 ? "passed" : "failed") << endl;
+                cout << "test_plate_recognize " << (test_plate_recognize() == 0 ? "passed" : "failed") << endl;
+                cout << "test_plate_locate "    << (test_plate_locate()    == 0 ? "passed" : "failed") << endl;
+                break;
+            }
+
+            // batch testing
+
+            if (parser.has_or(2, "general_test", "-gt")) {
+                acurayTest(GENERAL_TEST_PATH);
+                break;
+            }
+
+            if (parser.has_or(2, "native_test", "-nt")) {
+                acurayTest(NATIVE_TEST_PATH);
+                break;
+            }
+
+            // svm trains
+
+            if (parser.has_or(2, "svm_gen_learndata", "-sgl")) {
+                getLearnData();
+                break;
+            }
+
+            if (parser.has_or(2, "svm_tag_learndata", "-stl")) {
+                label_data();
+                break;
+            }
+
+            if (parser.has_or(2, "svm_detect", "-sd")) {
+                svmTrain(parser.has_or(2, "v", "svm_divide"), parser.has_or(2, "t", "svm_train"));
+                break;
+            }
+
+            // GDTS
+
+            if (parser.has_or(2, "gdts", "gts")) {
+                general_test();
+                break;
+            }
+
+            //
+
+            if (parser.has("group")) {
+                // ¿ª·¢ÍÅ¶Ó;
+                cout << endl;
+                cout << "ÎÒÃÇEasyPRÍÅ¶ÓÄ¿Ç°ÓÐÒ»¸ö5ÈË×óÓÒµÄÐ¡×éÔÚ½øÐÐEasyPRºóÐø°æ±¾µÄ¿ª·¢¹¤×÷¡£" << endl;
+                cout << "Èç¹ûÄã¶Ô±¾ÏîÄ¿¸ÐÐËÈ¤£¬²¢ÇÒÔ¸ÒâÎª¿ªÔ´¹±Ï×Ò»·ÝÁ¦Á¿£¬ÎÒÃÇºÜ»¶Ó­ÄãµÄ¼ÓÈë¡£" << endl;
+                cout << "Ä¿Ç°ÕÐÆ¸µÄÖ÷ÒªÈË²ÅÊÇ£º³µÅÆ¶¨Î»£¬Í¼ÏñÊ¶±ð£¬Éî¶ÈÑ§Ï°£¬ÍøÕ¾½¨ÉèÏà¹Ø·½ÃæµÄÅ£ÈË¡£" << endl;
+                cout << "Èç¹ûÄã¾õµÃ×Ô¼º·ûºÏÌõ¼þ£¬Çë·¢ÓÊ¼þµ½µØÖ·(easypr_dev@163.com)£¬ÆÚ´ýÄãµÄ¼ÓÈë£¡" << endl;
+                cout << endl;
+                break;
+            }
+
+            if (parser.has("thanks")) {
+                // ¸ÐÐ»Ãûµ¥
+                cout << endl;
+                cout << "±¾ÏîÄ¿ÔÚ½¨Éè¹ý³ÌÖÐ£¬ÊÜµ½ÁËºÜ¶àÈËµÄ°ïÖú£¬ÆäÖÐÒÔÏÂÊÇ¶Ô±¾ÏîÄ¿×ö³öÍ»³ö¹±Ï×µÄ" << endl;
+                cout << "(¹±Ï×°üÀ¨ÓÐÒæ½¨Òé£¬´úÂëµ÷ÓÅ£¬Êý¾ÝÌá¹©µÈµÈ,ÅÅÃû°´Ê±¼äË³Ðò)£º" << endl;
+                cout << "taotao1233£¬Çñ½õÉ½£¬ÌÆ´óÏÀ£¬jsxyhelu£¬Èç¹ûÓÐÒ»Ìì(zhoushiwei)£¬Ñ§Ï°·Ü¶·£¬Ô¬³ÐÖ¾£¬Ê¥³ÇÐ¡Ê¯½³£¬goldriver£¬Micooz£¬ÃÎÀïÊ±¹â£¬Rain Wang£¬ahccoms£¬ÐÇÒ¹Âä³¾£¬º£ëà¸Â¸Â" << endl;
+                cout << "»¹ÓÐºÜ¶àµÄÍ¬Ñ§¶Ô±¾ÏîÄ¿Ò²¸øÓèÁË¹ÄÀøÓëÖ§³Ö£¬ÔÚ´ËÒ²Ò»²¢±íÊ¾Õæ³ÏµÄÐ»Òâ£¡" << endl;
+                cout << endl;
+                break;
+            }
+
+        } while(false);
+
+    } catch (const std::exception &err) {
+        cout << err.what() << endl;
+    }
+}

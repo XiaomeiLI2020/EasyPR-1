@@ -1,7 +1,7 @@
 // svm_train.cpp : svm模型的训练文件，主要用在plate_detect中
 
 #include "../include/plate_recognize.h"
-#include "../include/features.h"
+#include "../include/feature.h"
 #include "../include/util.h"
 
 /*! \namespace easypr
@@ -12,16 +12,16 @@ namespace easypr{
 void learn2HasPlate(float bound = 0.7)
 {
 
-	string filePath = "train/data/plate_detect_svm/learn/HasPlate";
-	vector<string> files;
+	const char * filePath = "train/data/plate_detect_svm/learn/HasPlate";
 
 	////获取该路径下的所有文件
-	getFiles(filePath, files );
+        auto files = Utils::getFiles(filePath);
 
-	int size = (int)files.size();
-	if (0 == size)
-		cout << "No File Found in learn HasPlate!" << endl;
-
+	int size = files.size();
+    if (0 == size) {
+		cout << "File not found in " << filePath << endl;
+        return;
+    }
 	////随机选取70%作为训练数据，30%作为测试数据
 	srand(unsigned(time(NULL)));
 	random_shuffle(files.begin(), files.end());
@@ -33,11 +33,8 @@ void learn2HasPlate(float bound = 0.7)
 	{
 		cout << files[i].c_str() << endl;
 		Mat img = imread(files[i].c_str());
-        if (img.empty()) {
-            continue;
-        }
 		if(1)
-		{ 
+		{
 			stringstream ss(stringstream::in | stringstream::out);
 			ss << "train/data/plate_detect_svm/train/HasPlate/hasplate_" << i << ".jpg";
 			imwrite(ss.str(), img);
@@ -49,11 +46,8 @@ void learn2HasPlate(float bound = 0.7)
 	{
 		cout << files[i].c_str() << endl;
 		Mat img = imread(files[i].c_str());
-        if (img.empty()) {
-            continue;
-        }
 		if(1)
-		{ 
+		{
 			stringstream ss(stringstream::in | stringstream::out);
 			ss << "train/data/plate_detect_svm/test/HasPlate/hasplate_" << i << ".jpg";
 			imwrite(ss.str(), img);
@@ -64,15 +58,15 @@ void learn2HasPlate(float bound = 0.7)
 void learn2NoPlate(float bound = 0.7)
 {
 
-	string filePath = "train/data/plate_detect_svm/learn/NoPlate";
-	vector<string> files;
+	const char * filePath = "train/data/plate_detect_svm/learn/NoPlate";
 
 	////获取该路径下的所有文件
-	getFiles(filePath, files );
-	int size = (int)files.size();
-	if (0 == size)
-		cout << "No File Found in learn NoPlate!" << endl;
-
+        auto files = Utils::getFiles(filePath);
+	int size = files.size();
+    if (0 == size) {
+		cout << "File not found in " << filePath << endl;
+        return;
+    }
 	////随机选取70%作为训练数据，30%作为测试数据
 	srand(unsigned(time(NULL)));
 	random_shuffle(files.begin(), files.end());
@@ -84,11 +78,8 @@ void learn2NoPlate(float bound = 0.7)
 	{
 		cout << files[i].c_str() << endl;
 		Mat img = imread(files[i].c_str());
-        if (img.empty()) {
-            continue;
-        }
 		if(1)
-		{ 
+		{
 			stringstream ss(stringstream::in | stringstream::out);
 			ss << "train/data/plate_detect_svm/train/NoPlate/noplate_" << i << ".jpg";
 			imwrite(ss.str(), img);
@@ -100,11 +91,8 @@ void learn2NoPlate(float bound = 0.7)
 	{
 		cout << files[i].c_str() << endl;
 		Mat img = imread(files[i].c_str());
-        if (img.empty()) {
-            continue;
-        }
 		if(1)
-		{ 
+		{
 			stringstream ss(stringstream::in | stringstream::out);
 			ss << "train/data/plate_detect_svm/test/NoPlate/noplate_" << i << ".jpg";
 			imwrite(ss.str(), img);
@@ -112,20 +100,20 @@ void learn2NoPlate(float bound = 0.7)
 	}
 }
 
-void getHasPlateTrain(Mat& trainingImages, vector<int>& trainingLabels, 
+void getHasPlateTrain(Mat& trainingImages, vector<int>& trainingLabels,
 	svmCallback getFeatures = getHisteqFeatures)
 {
 	int label = 1;
-	string  filePath = "train/data/plate_detect_svm/train/HasPlate";
-	vector<string> files;
+	const char * filePath = "train/data/plate_detect_svm/train/HasPlate";
 
 	////获取该路径下的所有文件
-	getFiles(filePath, files );
+        auto files = Utils::getFiles(filePath);
 
-	int size = (int)files.size();
-	if (0 == size)
-		cout << "No File Found in train HasPlate!" << endl;
-
+	int size = files.size();
+    if (0 == size) {
+		cout << "File not found in " << filePath << endl;
+        return;
+    }
 	cout << "get HasPlate train!" << endl;
 	for (int i = 0; i < size; i++)
 	{
@@ -143,28 +131,26 @@ void getHasPlateTrain(Mat& trainingImages, vector<int>& trainingLabels,
 }
 
 
-void getNoPlateTrain(Mat& trainingImages, vector<int>& trainingLabels, 
+void getNoPlateTrain(Mat& trainingImages, vector<int>& trainingLabels,
 	svmCallback getFeatures = getHisteqFeatures)
 {
 	int label = 0;
-	string  filePath = "train/data/plate_detect_svm/train/NoPlate";
-	vector<string> files;
+	const char * filePath = "train/data/plate_detect_svm/train/NoPlate";
 
 	////获取该路径下的所有文件
-	getFiles(filePath, files );
+        auto files = Utils::getFiles(filePath);
 
-	int size = (int)files.size();
-	if (0 == size)
-		cout << "No File Found in train HasPlate!" << endl;
-
+	int size = files.size();
+    if (0 == size) {
+		cout << "File not found in " << filePath << endl;
+        return;
+    }
 	cout << "get NoPlate train!" << endl;
 	for (int i = 0; i < size; i++)
 	{
 		//cout << files[i].c_str() << endl;
 		Mat img = imread(files[i].c_str());
-        if (img.empty()) {
-            continue;
-        }
+
 		//调用回调函数决定特征
 		Mat features;
 		getFeatures(img, features);
@@ -178,24 +164,22 @@ void getNoPlateTrain(Mat& trainingImages, vector<int>& trainingLabels,
 void getHasPlateTest(vector<Mat>& testingImages, vector<int>& testingLabels)
 {
 	int label = 1;
-	string filePath = "train/data/plate_detect_svm/test/HasPlate";
-	vector<string> files;
+	const char * filePath = "train/data/plate_detect_svm/test/HasPlate";
 
 	////获取该路径下的所有文件
-	getFiles(filePath, files );
+        auto files = Utils::getFiles(filePath);
 
-	int size = (int)files.size();
-	if (0 == size)
-		cout << "No File Found in test HasPlate!" << endl;
-
+	int size = files.size();
+    if (0 == size) {
+		cout << "File not found in " << filePath << endl;
+        return;
+    }
 	cout << "get HasPlate test!" << endl;
 	for (int i = 0; i < size; i++)
 	{
 		//cout << files[i].c_str() << endl;
 		Mat img = imread(files[i].c_str());
-        if (img.empty()) {
-            continue;
-        }
+
         testingImages.push_back(img);
         testingLabels.push_back(label);
 	}
@@ -204,24 +188,22 @@ void getHasPlateTest(vector<Mat>& testingImages, vector<int>& testingLabels)
 void getNoPlateTest(vector<Mat>& testingImages, vector<int>& testingLabels)
 {
 	int label = 0;
-	string filePath = "train/data/plate_detect_svm/test/NoPlate";
-	vector<string> files;
+	const char * filePath = "train/data/plate_detect_svm/test/NoPlate";
 
 	////获取该路径下的所有文件
-	getFiles(filePath, files );
+        auto files = Utils::getFiles(filePath);
 
-	int size = (int)files.size();
-	if (0 == size)
-		cout << "No File Found in test NoPlate!" << endl;
-
+	int size = files.size();
+    if (0 == size) {
+		cout << "File not found in " << filePath << endl;
+        return;
+    }
 	cout << "get NoPlate test!" << endl;
 	for (int i = 0; i < size; i++)
 	{
 		//cout << files[i].c_str() << endl;
 		Mat img = imread(files[i].c_str());
-        if (img.empty()) {
-            continue;
-        }
+
         testingImages.push_back(img);
         testingLabels.push_back(label);
 	}
@@ -317,22 +299,11 @@ void getAccuracy(Mat& testingclasses_preditc, Mat& testingclasses_real)
 	}
 }
 
-std::pair<cv::Mat, cv::Mat> PCAProcess(Mat &training_Data, const int &reducepca)
-{
-        PCA pca=PCA(training_Data,Mat(),CV_PCA_DATA_AS_ROW,reducepca);
-        Mat  pca_vector=pca.eigenvectors;//映射矩阵 特征向量
-        pca_vector=pca_vector.t();
-        Mat result;
-        Mat pRecon;
-        pca.project(training_Data,result);
-    
-    return std::make_pair(result, pca_vector);
-}
 
 int svmTrain(bool dividePrepared = true, bool trainPrepared = true,
 	svmCallback getFeatures = getHistogramFeatures)
 {
-    Mat  pca_vector;
+
 	Mat classes;
     Mat trainingData;
 
@@ -348,7 +319,6 @@ int svmTrain(bool dividePrepared = true, bool trainPrepared = true,
 	}
 
 	//将训练数据加载入内存
-    std::pair<cv::Mat, cv::Mat> pcadata;
 	if (trainPrepared == false)
 	{
 		cout << "Begin to get train data to memory" << endl;
@@ -358,11 +328,9 @@ int svmTrain(bool dividePrepared = true, bool trainPrepared = true,
 		Mat(trainingImages).copyTo(trainingData);
 		trainingData.convertTo(trainingData, CV_32FC1);
 		Mat(trainingLabels).copyTo(classes);
-        pcadata=PCAProcess(trainingData, 50);
 	}
 
 	//Test SVM
-	Mat testingclasses_real;
 	vector<Mat> testingImages;
     vector<int> testingLabels_real;
 
@@ -372,7 +340,7 @@ int svmTrain(bool dividePrepared = true, bool trainPrepared = true,
 	getNoPlateTest(testingImages, testingLabels_real);
 
 	CvSVM svm;
-	if (trainPrepared == false)
+	if (trainPrepared == false && !classes.empty() && !trainingData.empty())
 	{
 		CvSVMParams SVM_params;
 		SVM_params.svm_type = CvSVM::C_SVC;
@@ -389,33 +357,34 @@ int svmTrain(bool dividePrepared = true, bool trainPrepared = true,
 		//Train SVM
 		cout << "Begin to generate svm" << endl;
 
-		//CvSVM svm(trainingData, classes, Mat(), Mat(), SVM_params);
-		svm.train_auto(pcadata.first, classes, Mat(), Mat(), SVM_params, 10,
-				CvSVM::get_default_grid(CvSVM::C),
-				CvSVM::get_default_grid(CvSVM::GAMMA), 
-				CvSVM::get_default_grid(CvSVM::P), 
-				CvSVM::get_default_grid(CvSVM::NU), 
-				CvSVM::get_default_grid(CvSVM::COEF),
-				CvSVM::get_default_grid(CvSVM::DEGREE),
-				true);
+        try {
+            //CvSVM svm(trainingData, classes, Mat(), Mat(), SVM_params);
+            svm.train_auto(trainingData, classes, Mat(), Mat(), SVM_params, 10,
+                           CvSVM::get_default_grid(CvSVM::C),
+                           CvSVM::get_default_grid(CvSVM::GAMMA),
+                           CvSVM::get_default_grid(CvSVM::P),
+                           CvSVM::get_default_grid(CvSVM::NU),
+                           CvSVM::get_default_grid(CvSVM::COEF),
+                           CvSVM::get_default_grid(CvSVM::DEGREE),
+                           true);
+        } catch (const Exception &err) {
+            cout << err.what() << endl;
+        }
 
 		cout << "Svm generate done!" << endl;
 
 		FileStorage fsTo("train/svm.xml", cv::FileStorage::WRITE);
 		svm.write(*fsTo, "svm");
-        FileStorage fs("train/pcavector.xml",FileStorage::WRITE);
-        fs << "pca" << pcadata.second;
-        fs.release();
-        fsTo.release();
-        
 	}
 	else
 	{
-		string path = "train/svm.xml";
-		svm.load(path.c_str(), "svm");
-        FileStorage fs("train/pcavector.xml",FileStorage::READ);
-        fs["pca"] >> pca_vector;
-        fs.release();
+        try {
+            string path = "train/svm.xml";
+            svm.load(path.c_str(), "svm");
+        } catch (const Exception &err) {
+            cout << err.what() << endl;
+            return 0; //next predict requires svm
+        }
 	}
 
 	cout << "Begin to predict" << endl;
@@ -426,7 +395,7 @@ int svmTrain(bool dividePrepared = true, bool trainPrepared = true,
 	double pfalse_rtrue = 0;
 	double pfalse_rfalse = 0;
 
-	int size =(int) testingImages.size();
+	int size = testingImages.size();
 	for (int i = 0; i < size; i++)
 	{
 		//cout << files[i].c_str() << endl;
@@ -439,7 +408,7 @@ int svmTrain(bool dividePrepared = true, bool trainPrepared = true,
 		features = features.reshape(1, 1);
 		features.convertTo(features, CV_32FC1);
 
-		int predict = (int)svm.predict(features*pca_vector);
+		int predict = (int)svm.predict(features);
 		int real = testingLabels_real[i];
 
 		if (predict == 1 && real == 1)

@@ -1,8 +1,9 @@
 //////////////////////////////////////////////////////////////////////////
 // Name:	    plate_locate Header
-// Version:		1.0
+// Version:		1.2
 // Date:	    2014-09-19
 // MDate:		2014-09-29
+// MDate:	    2015-03-13
 // Author:	    liuruoze
 // Copyright:   liuruoze
 // Reference:	Mastering OpenCV with Practical Computer Vision Projects
@@ -14,7 +15,9 @@
 #define __PLATE_LOCATE_H__
 
 #include "prep.h"
-
+#include "plate.h"
+#include "core_func.h"
+class LabInfo;
 /*! \namespace easypr
     Namespace where all the C++ EasyPR functionality resides
 */
@@ -25,19 +28,68 @@ class CPlateLocate
 public:
 	CPlateLocate();
 
-	//! è½¦ç‰Œå®šä½
-	int plateLocate(Mat, vector<Mat>& );
+	enum LocateType { SOBEL, COLOR };
 
-	//! è½¦ç‰Œçš„å°ºå¯¸éªŒè¯
+	//! SobelµÚÒ»´ÎËÑË÷
+	//! ²»ÏŞÖÆ´óĞ¡ºÍĞÎ×´£¬»ñÈ¡µÄBoundRect½øÈëÏÂÒ»²½
+	int sobelFrtSearch(const Mat& src, vector<Rect_<float>>& outRects);
+
+	//! SobelµÚ¶ş´ÎËÑË÷
+	//! ¶Ô´óĞ¡ºÍĞÎ×´×öÏŞÖÆ£¬Éú³É²Î¿¼×ø±ê
+	int sobelSecSearch( Mat& bound, Point2f refpoint, vector<RotatedRect>& outRects);
+	int sobelSecSearchPart( Mat& bound, Point2f refpoint, vector<RotatedRect>& outRects);
+
+	//! ¿¹Å¤Ğ±´¦Àí
+	int deskew(const Mat& src, const Mat& src_b, vector<RotatedRect>& inRects,  vector<CPlate>& outPlates);
+
+	//! ÊÇ·ñÆ«Ğ±
+	//! ÊäÈë¶şÖµ»¯Í¼Ïñ£¬Êä³öÅĞ¶Ï½á¹û
+	bool isdeflection(const Mat& in, const double angle, double& slope);
+	
+	//! SobelÔËËã
+	//! ÊäÈë²ÊÉ«Í¼Ïñ£¬Êä³ö¶şÖµ»¯Í¼Ïñ
+	int sobelOper(const Mat& in, Mat& out, int blurSize, int morphW, int morphH);
+
+	//! ¼ÆËãÒ»¸ö°²È«µÄRect
+	bool calcSafeRect(const RotatedRect& roi_rect, const Mat& src, Rect_<float>& safeBoundRect);
+
+	//! Ğı×ª²Ù×÷
+	bool rotation(Mat& in, Mat& out, const Size rect_size, const Point2f center, const double angle);
+
+	//! Å¤±ä²Ù×÷
+	void affine(const Mat& in, Mat& out, const double slope);
+
+	//! ÑÕÉ«¶¨Î»·¨
+	int plateColorLocate(Mat src, vector<CPlate>& candPlates, int index = 0);
+
+	//! Sobel¶¨Î»·¨
+	int plateSobelLocate(Mat src, vector<CPlate>& candPlates, int index = 0);
+	int sobelOperT(const Mat& in, Mat& out, int blurSize, int morphW, int morphH);
+
+	//! ColorËÑË÷
+	int colorSearch(const Mat& src, const Color r, Mat& out, vector<RotatedRect>& outRects, int index = 0);
+
+	//! Î´Ê¹ÓÃº¯ÊıÓë´úÂë
+	//! ¿ªÊ¼------------
+	bool sobelJudge(Mat roi);
+	int deskewOld(Mat src, vector<RotatedRect>& inRects, vector<RotatedRect>& outRects, vector<Mat>& outMats, LocateType locateType);
+	bool verifyCharSizes(Mat r);
+	//! ½áÊø------------
+	//! Î´Ê¹ÓÃº¯ÊıÓë´úÂë
+
+	//! ³µÅÆ¶¨Î»
+	int plateLocate(Mat, vector<Mat>&, int = 0 );
+
+	//! ³µÅÆµÄ³ß´çÑéÖ¤
 	bool verifySizes(RotatedRect mr);
 
-	//! ç»“æœè½¦ç‰Œæ˜¾ç¤º
+	//! ½á¹û³µÅÆÏÔÊ¾
 	Mat showResultMat(Mat src, Size rect_size, Point2f center, int index);
 
-	//! ç”Ÿæ´»æ¨¡å¼ä¸å·¥ä¸šæ¨¡å¼åˆ‡æ¢
+	//! Éú»îÄ£Ê½Óë¹¤ÒµÄ£Ê½ÇĞ»»
 	void setLifemode(bool param);
 
-	//! è®¾ç½®ä¸è¯»å–å˜é‡
+	//! ÉèÖÃÓë¶ÁÈ¡±äÁ¿
 	inline void setGaussianBlurSize(int param){ m_GaussianBlurSize = param;}
 	inline int getGaussianBlurSize() const{ return m_GaussianBlurSize;}
 
@@ -57,56 +109,58 @@ public:
 
 	inline void setJudgeAngle(int param){ m_angle = param;}
 
-	//! æ˜¯å¦å¼€å¯è°ƒè¯•æ¨¡å¼
+	//! ÊÇ·ñ¿ªÆôµ÷ÊÔÄ£Ê½
 	inline void setDebug(int param){ m_debug = param;}
 
-	//! è·å–è°ƒè¯•æ¨¡å¼çŠ¶æ€
+	//! »ñÈ¡µ÷ÊÔÄ£Ê½×´Ì¬
 	inline int getDebug(){ return m_debug;}
 
-	//! PlateLocateæ‰€ç”¨å¸¸é‡
+	//! PlateLocateËùÓÃ³£Á¿
 	static const int DEFAULT_GAUSSIANBLUR_SIZE = 5;
 	static const int SOBEL_SCALE = 1;
 	static const int SOBEL_DELTA = 0;
 	static const int SOBEL_DDEPTH = CV_16S;
 	static const int SOBEL_X_WEIGHT = 1;
 	static const int SOBEL_Y_WEIGHT = 0 ;
-	static const int DEFAULT_MORPH_SIZE_WIDTH = 17;
-	static const int DEFAULT_MORPH_SIZE_HEIGHT = 3;
+	static const int DEFAULT_MORPH_SIZE_WIDTH = 17;//17
+	static const int DEFAULT_MORPH_SIZE_HEIGHT = 3;//3
 
-	//! showResultMatæ‰€ç”¨å¸¸é‡
+	//! showResultMatËùÓÃ³£Á¿
 	static const int WIDTH = 136;
 	static const int HEIGHT = 36;
 	static const int TYPE = CV_8UC3;
 	
-	//! verifySizeæ‰€ç”¨å¸¸é‡
-	static const int DEFAULT_VERIFY_MIN = 3;
-	static const int DEFAULT_VERIFY_MAX = 20;
+	//! verifySizeËùÓÃ³£Á¿
+	static const int DEFAULT_VERIFY_MIN = 1;//3
+	static const int DEFAULT_VERIFY_MAX = 24;//20
 
-	//! è§’åº¦åˆ¤æ–­æ‰€ç”¨å¸¸é‡
-	static const int DEFAULT_ANGLE = 30;
+	//! ½Ç¶ÈÅĞ¶ÏËùÓÃ³£Á¿
+	static const int DEFAULT_ANGLE = 60;//30
 
-	//! æ˜¯å¦å¼€å¯è°ƒè¯•æ¨¡å¼å¸¸é‡ï¼Œé»˜è®¤0ä»£è¡¨å…³é—­
-	static const int DEFAULT_DEBUG = 0;
+	//! ÊÇ·ñ¿ªÆôµ÷ÊÔÄ£Ê½³£Á¿£¬Ä¬ÈÏ0´ú±í¹Ø±Õ
+	static const int DEFAULT_DEBUG = 1;
 
 protected:
-	//! é«˜æ–¯æ¨¡ç³Šæ‰€ç”¨å˜é‡
+	//! ¸ßË¹Ä£ºıËùÓÃ±äÁ¿
 	int m_GaussianBlurSize;
 
-	//! è¿æ¥æ“ä½œæ‰€ç”¨å˜é‡
+	//! Á¬½Ó²Ù×÷ËùÓÃ±äÁ¿
 	int m_MorphSizeWidth;
 	int m_MorphSizeHeight;
 
-	//! verifySizeæ‰€ç”¨å˜é‡
+	//! verifySizeËùÓÃ±äÁ¿
 	float m_error;
 	float m_aspect;
 	int m_verifyMin;
 	int m_verifyMax;
 
-	//! è§’åº¦åˆ¤æ–­æ‰€ç”¨å˜é‡
+	//! ½Ç¶ÈÅĞ¶ÏËùÓÃ±äÁ¿
 	int m_angle;
 
-	//! æ˜¯å¦å¼€å¯è°ƒè¯•æ¨¡å¼ï¼Œ0å…³é—­ï¼Œé0å¼€å¯
+	//! ÊÇ·ñ¿ªÆôµ÷ÊÔÄ£Ê½£¬0¹Ø±Õ£¬·Ç0¿ªÆô
 	int m_debug;
+
+	LabInfo * m_labItem;
 };
 
 }	/*! \namespace easypr*/
