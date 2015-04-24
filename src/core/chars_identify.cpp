@@ -42,37 +42,67 @@ CCharsIdentify::CCharsIdentify()
 
 	if (m_map.empty())
 	{
-		m_map.insert(pair<string, string>("zh_cuan","´¨"));
-		m_map.insert(pair<string, string>("zh_e","¶õ"));
-		m_map.insert(pair<string, string>("zh_gan","¸Ó"));
-		m_map.insert(pair<string, string>("zh_gan1","¸Ê"));
-		m_map.insert(pair<string, string>("zh_gui","¹ó"));
-		m_map.insert(pair<string, string>("zh_gui1","¹ğ"));
-		m_map.insert(pair<string, string>("zh_hei","ºÚ"));
-		m_map.insert(pair<string, string>("zh_hu","»¦"));
-		m_map.insert(pair<string, string>("zh_ji","¼½"));
-		m_map.insert(pair<string, string>("zh_jin","½ò"));
-		m_map.insert(pair<string, string>("zh_jing","¾©"));
-		m_map.insert(pair<string, string>("zh_jl","¼ª"));
-		m_map.insert(pair<string, string>("zh_liao","ÁÉ"));
-		m_map.insert(pair<string, string>("zh_lu","Â³"));
-		m_map.insert(pair<string, string>("zh_meng","ÃÉ"));
-		m_map.insert(pair<string, string>("zh_min","Ãö"));
-		m_map.insert(pair<string, string>("zh_ning","Äş"));
-		m_map.insert(pair<string, string>("zh_qing","Çà"));
-		m_map.insert(pair<string, string>("zh_qiong","Çí"));
-		m_map.insert(pair<string, string>("zh_shan","ÉÂ"));
-		m_map.insert(pair<string, string>("zh_su","ËÕ"));
-		m_map.insert(pair<string, string>("zh_sx","½ú"));
-		m_map.insert(pair<string, string>("zh_wan","Íî"));
-		m_map.insert(pair<string, string>("zh_xiang","Ïæ"));
-		m_map.insert(pair<string, string>("zh_xin","ĞÂ"));
-		m_map.insert(pair<string, string>("zh_yu","Ô¥"));
-		m_map.insert(pair<string, string>("zh_yu1","Óå"));
-		m_map.insert(pair<string, string>("zh_yue","ÔÁ"));
-		m_map.insert(pair<string, string>("zh_yun","ÔÆ"));
-		m_map.insert(pair<string, string>("zh_zang","²Ø"));
-		m_map.insert(pair<string, string>("zh_zhe","Õã"));
+        m_map.insert(pair<string, string>("zh_cuan","´¨"));
+        
+        m_map.insert(pair<string, string>("zh_e","¶õ"));
+        
+        m_map.insert(pair<string, string>("zh_gan","¸Ó"));
+        
+        m_map.insert(pair<string, string>("zh_gan1","¸Ê"));
+        
+        m_map.insert(pair<string, string>("zh_gui","¹ó"));
+        
+        m_map.insert(pair<string, string>("zh_gui1","¹ğ"));
+        
+        m_map.insert(pair<string, string>("zh_hei","ºÚ"));
+        
+        m_map.insert(pair<string, string>("zh_hu","»¦"));
+        
+        m_map.insert(pair<string, string>("zh_ji","¼½"));
+        
+        m_map.insert(pair<string, string>("zh_jin","½ò"));
+        
+        m_map.insert(pair<string, string>("zh_jing","¾©"));
+        
+        m_map.insert(pair<string, string>("zh_jl","¼ª"));
+        
+        m_map.insert(pair<string, string>("zh_liao","ÁÉ"));
+        
+        m_map.insert(pair<string, string>("zh_lu","Â³"));
+        
+        m_map.insert(pair<string, string>("zh_meng","ÃÉ"));
+        
+        m_map.insert(pair<string, string>("zh_min","Ãö"));
+        
+        m_map.insert(pair<string, string>("zh_ning","Äş"));
+        
+        m_map.insert(pair<string, string>("zh_qing","Çà"));
+        
+        m_map.insert(pair<string, string>("zh_qiong","Çí"));
+        
+        m_map.insert(pair<string, string>("zh_shan","ÉÂ"));
+        
+        m_map.insert(pair<string, string>("zh_su","ËÕ"));
+        
+        m_map.insert(pair<string, string>("zh_sx","½ú"));
+        
+        m_map.insert(pair<string, string>("zh_wan","Íî"));
+        
+        m_map.insert(pair<string, string>("zh_xiang","Ïæ"));
+        
+        m_map.insert(pair<string, string>("zh_xin","ĞÂ"));
+        
+        m_map.insert(pair<string, string>("zh_yu","Ô¥"));
+        
+        m_map.insert(pair<string, string>("zh_yu1","Óå"));
+        
+        m_map.insert(pair<string, string>("zh_yue","ÔÁ"));
+        
+        m_map.insert(pair<string, string>("zh_yun","ÔÆ"));
+        
+        m_map.insert(pair<string, string>("zh_zang","²Ø"));
+        
+        m_map.insert(pair<string, string>("zh_zhe","Õã"));
 	}
 }
 
