@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/test/test.cpp"
-            timestampString = "444329635.162522"
+            timestampString = "451705826.517338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "469"
-            endingLineNumber = "469">
+            startingLineNumber = "793"
+            endingLineNumber = "793">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/test/test.cpp"
-            timestampString = "444329635.162522"
+            timestampString = "451705826.517338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "409"
-            endingLineNumber = "409">
+            startingLineNumber = "733"
+            endingLineNumber = "733">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,9 +42,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "396"
-            endingLineNumber = "396"
-            landmarkName = "svmTrain(bool dividePrepared = true, bool trainPrepared = true, svmCallback getFeatures = getHistogramFeatures)"
-            landmarkType = "7">
+            endingLineNumber = "396">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,9 +56,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "425"
-            endingLineNumber = "425"
-            landmarkName = "svmTrain(bool dividePrepared = true, bool trainPrepared = true, svmCallback getFeatures = getHistogramFeatures)"
-            landmarkType = "7">
+            endingLineNumber = "425">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -102,9 +98,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "415"
-            endingLineNumber = "415"
-            landmarkName = "svmTrain(bool dividePrepared = true, bool trainPrepared = true, svmCallback getFeatures = getHistogramFeatures)"
-            landmarkType = "7">
+            endingLineNumber = "415">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -118,9 +112,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "369"
-            endingLineNumber = "369"
-            landmarkName = "svmTrain(bool dividePrepared = true, bool trainPrepared = true, svmCallback getFeatures = getHistogramFeatures)"
-            landmarkType = "7">
+            endingLineNumber = "369">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -7,28 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		535238611AE7E7560023BB4E /* chars_identify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383A1AE7E7550023BB4E /* chars_identify.cpp */; };
-		535238621AE7E7560023BB4E /* chars_recognise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383B1AE7E7550023BB4E /* chars_recognise.cpp */; };
-		535238631AE7E7560023BB4E /* chars_segment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383C1AE7E7550023BB4E /* chars_segment.cpp */; };
-		535238641AE7E7560023BB4E /* core_func.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383D1AE7E7550023BB4E /* core_func.cpp */; };
-		535238651AE7E7560023BB4E /* feature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383E1AE7E7550023BB4E /* feature.cpp */; };
-		535238661AE7E7560023BB4E /* plate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352383F1AE7E7550023BB4E /* plate.cpp */; };
-		535238671AE7E7560023BB4E /* plate_detect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238401AE7E7550023BB4E /* plate_detect.cpp */; };
-		535238681AE7E7560023BB4E /* plate_judge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238411AE7E7550023BB4E /* plate_judge.cpp */; };
-		535238691AE7E7560023BB4E /* plate_locate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238421AE7E7550023BB4E /* plate_locate.cpp */; };
-		5352386A1AE7E7560023BB4E /* plate_recognize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238431AE7E7550023BB4E /* plate_recognize.cpp */; };
-		5352386B1AE7E7560023BB4E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238521AE7E7550023BB4E /* main.cpp */; };
-		5352386C1AE7E7560023BB4E /* accuracy_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238541AE7E7560023BB4E /* accuracy_test.cpp */; };
-		5352386D1AE7E7560023BB4E /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238551AE7E7560023BB4E /* test.cpp */; };
-		5352386E1AE7E7560023BB4E /* ann_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238571AE7E7560023BB4E /* ann_train.cpp */; };
-		5352386F1AE7E7560023BB4E /* svm_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238581AE7E7560023BB4E /* svm_train.cpp */; };
+		53007F7C1AE9D908009CF393 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F7A1AE9D908009CF393 /* test.cpp */; };
+		53007F7E1AE9DA13009CF393 /* accuracy_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F7D1AE9DA13009CF393 /* accuracy_test.cpp */; };
+		53007F881AE9DB3C009CF393 /* chars_recognise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F7F1AE9DB3C009CF393 /* chars_recognise.cpp */; };
+		53007F891AE9DB3C009CF393 /* chars_segment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F801AE9DB3C009CF393 /* chars_segment.cpp */; };
+		53007F8A1AE9DB3C009CF393 /* core_func.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F811AE9DB3C009CF393 /* core_func.cpp */; };
+		53007F8B1AE9DB3C009CF393 /* feature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F821AE9DB3C009CF393 /* feature.cpp */; };
+		53007F8C1AE9DB3C009CF393 /* plate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F831AE9DB3C009CF393 /* plate.cpp */; };
+		53007F8D1AE9DB3C009CF393 /* plate_detect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F841AE9DB3C009CF393 /* plate_detect.cpp */; };
+		53007F8E1AE9DB3C009CF393 /* plate_judge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F851AE9DB3C009CF393 /* plate_judge.cpp */; };
+		53007F8F1AE9DB3C009CF393 /* plate_locate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F861AE9DB3C009CF393 /* plate_locate.cpp */; };
+		53007F901AE9DB3C009CF393 /* chars_identify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F871AE9DB3C009CF393 /* chars_identify.cpp */; };
+		53007F921AE9DCC0009CF393 /* plate_recognize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F911AE9DCC0009CF393 /* plate_recognize.cpp */; };
+		53007F951AE9DD1C009CF393 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F931AE9DD1C009CF393 /* util.cpp */; };
+		53007F971AE9DD53009CF393 /* mc_data_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F961AE9DD53009CF393 /* mc_data_prepare.cpp */; };
+		53007F991AE9FE6E009CF393 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53007F981AE9FE6E009CF393 /* main.cpp */; };
+		530080211AEA1655009CF393 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530080201AEA1655009CF393 /* CoreFoundation.framework */; };
 		535238701AE7E7560023BB4E /* CParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385A1AE7E7560023BB4E /* CParser.cpp */; };
 		535238711AE7E7560023BB4E /* deface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385B1AE7E7560023BB4E /* deface.cpp */; };
 		535238721AE7E7560023BB4E /* general_test_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385C1AE7E7560023BB4E /* general_test_prepare.cpp */; };
 		535238731AE7E7560023BB4E /* generate_gdts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385D1AE7E7560023BB4E /* generate_gdts.cpp */; };
 		535238741AE7E7560023BB4E /* learn_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385E1AE7E7560023BB4E /* learn_prepare.cpp */; };
-		535238751AE7E7560023BB4E /* mc_data_prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5352385F1AE7E7560023BB4E /* mc_data_prepare.cpp */; };
-		535238761AE7E7560023BB4E /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535238601AE7E7560023BB4E /* util.cpp */; };
+		5385255B1AEC809000A64278 /* ann_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5385255A1AEC809000A64278 /* ann_train.cpp */; };
+		5385255D1AEC80C300A64278 /* svm_train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5385255C1AEC80C300A64278 /* svm_train.cpp */; };
 		53EBCE001A7B593A002F67C1 /* libopencv_calib3d.2.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBCDEF1A7B593A002F67C1 /* libopencv_calib3d.2.4.8.dylib */; };
 		53EBCE011A7B593A002F67C1 /* libopencv_contrib.2.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBCDF01A7B593A002F67C1 /* libopencv_contrib.2.4.8.dylib */; };
 		53EBCE021A7B593A002F67C1 /* libopencv_core.2.4.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBCDF11A7B593A002F67C1 /* libopencv_core.2.4.8.dylib */; };
@@ -61,41 +62,173 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5352383A1AE7E7550023BB4E /* chars_identify.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = chars_identify.cpp; sourceTree = "<group>"; };
-		5352383B1AE7E7550023BB4E /* chars_recognise.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = chars_recognise.cpp; sourceTree = "<group>"; };
-		5352383C1AE7E7550023BB4E /* chars_segment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_segment.cpp; sourceTree = "<group>"; };
-		5352383D1AE7E7550023BB4E /* core_func.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = core_func.cpp; sourceTree = "<group>"; };
-		5352383E1AE7E7550023BB4E /* feature.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = feature.cpp; sourceTree = "<group>"; };
-		5352383F1AE7E7550023BB4E /* plate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate.cpp; sourceTree = "<group>"; };
-		535238401AE7E7550023BB4E /* plate_detect.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = plate_detect.cpp; sourceTree = "<group>"; };
-		535238411AE7E7550023BB4E /* plate_judge.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = plate_judge.cpp; sourceTree = "<group>"; };
-		535238421AE7E7550023BB4E /* plate_locate.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = plate_locate.cpp; sourceTree = "<group>"; };
-		535238431AE7E7550023BB4E /* plate_recognize.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = plate_recognize.cpp; sourceTree = "<group>"; };
-		535238451AE7E7550023BB4E /* chars_identify.h */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.c.h; path = chars_identify.h; sourceTree = "<group>"; };
-		535238461AE7E7550023BB4E /* chars_recognise.h */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.c.h; path = chars_recognise.h; sourceTree = "<group>"; };
-		535238471AE7E7550023BB4E /* chars_segment.h */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.c.h; path = chars_segment.h; sourceTree = "<group>"; };
-		535238481AE7E7550023BB4E /* core_func.h */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.c.h; path = core_func.h; sourceTree = "<group>"; };
-		535238491AE7E7550023BB4E /* CParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CParser.h; sourceTree = "<group>"; };
-		5352384A1AE7E7550023BB4E /* feature.h */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.c.h; path = feature.h; sourceTree = "<group>"; };
-		5352384B1AE7E7550023BB4E /* plate.h */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.c.h; path = plate.h; sourceTree = "<group>"; };
-		5352384C1AE7E7550023BB4E /* plate_detect.h */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.c.h; path = plate_detect.h; sourceTree = "<group>"; };
-		5352384D1AE7E7550023BB4E /* plate_judge.h */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.c.h; path = plate_judge.h; sourceTree = "<group>"; };
-		5352384E1AE7E7550023BB4E /* plate_locate.h */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.c.h; path = plate_locate.h; sourceTree = "<group>"; };
-		5352384F1AE7E7550023BB4E /* plate_recognize.h */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.c.h; path = plate_recognize.h; sourceTree = "<group>"; };
-		535238501AE7E7550023BB4E /* prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prep.h; sourceTree = "<group>"; };
-		535238511AE7E7550023BB4E /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
-		535238521AE7E7550023BB4E /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		535238541AE7E7560023BB4E /* accuracy_test.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = accuracy_test.cpp; sourceTree = "<group>"; };
-		535238551AE7E7560023BB4E /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
-		535238571AE7E7560023BB4E /* ann_train.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = ann_train.cpp; sourceTree = "<group>"; };
-		535238581AE7E7560023BB4E /* svm_train.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = svm_train.cpp; sourceTree = "<group>"; };
+		53007F7A1AE9D908009CF393 /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		53007F7D1AE9DA13009CF393 /* accuracy_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = accuracy_test.cpp; sourceTree = "<group>"; };
+		53007F7F1AE9DB3C009CF393 /* chars_recognise.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_recognise.cpp; sourceTree = "<group>"; };
+		53007F801AE9DB3C009CF393 /* chars_segment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_segment.cpp; sourceTree = "<group>"; };
+		53007F811AE9DB3C009CF393 /* core_func.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = core_func.cpp; sourceTree = "<group>"; };
+		53007F821AE9DB3C009CF393 /* feature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = feature.cpp; sourceTree = "<group>"; };
+		53007F831AE9DB3C009CF393 /* plate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate.cpp; sourceTree = "<group>"; };
+		53007F841AE9DB3C009CF393 /* plate_detect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_detect.cpp; sourceTree = "<group>"; };
+		53007F851AE9DB3C009CF393 /* plate_judge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_judge.cpp; sourceTree = "<group>"; };
+		53007F861AE9DB3C009CF393 /* plate_locate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_locate.cpp; sourceTree = "<group>"; };
+		53007F871AE9DB3C009CF393 /* chars_identify.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chars_identify.cpp; sourceTree = "<group>"; };
+		53007F911AE9DCC0009CF393 /* plate_recognize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plate_recognize.cpp; sourceTree = "<group>"; };
+		53007F931AE9DD1C009CF393 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		53007F961AE9DD53009CF393 /* mc_data_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mc_data_prepare.cpp; sourceTree = "<group>"; };
+		53007F981AE9FE6E009CF393 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		53007F9B1AEA0565009CF393 /* chars_identify.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chars_identify.jpg; sourceTree = "<group>"; };
+		53007F9C1AEA0565009CF393 /* chars_recognise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chars_recognise.jpg; sourceTree = "<group>"; };
+		53007F9D1AEA0565009CF393 /* chars_segment.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chars_segment.jpg; sourceTree = "<group>"; };
+		53007F9E1AEA0565009CF393 /* GDSL.txt */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = text; path = GDSL.txt; sourceTree = "<group>"; };
+		53007FA01AEA0565009CF393 /* 京A88731.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "京A88731.jpg"; sourceTree = "<group>"; };
+		53007FA11AEA0565009CF393 /* 京CX8888.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "京CX8888.jpg"; sourceTree = "<group>"; };
+		53007FA21AEA0565009CF393 /* 京H99999.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "京H99999.jpg"; sourceTree = "<group>"; };
+		53007FA31AEA0565009CF393 /* 冀FA3215.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "冀FA3215.jpg"; sourceTree = "<group>"; };
+		53007FA41AEA0565009CF393 /* 川A019W2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川A019W2.jpg"; sourceTree = "<group>"; };
+		53007FA51AEA0565009CF393 /* 川A09X20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川A09X20.jpg"; sourceTree = "<group>"; };
+		53007FA61AEA0565009CF393 /* 川A82M83.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川A82M83.jpg"; sourceTree = "<group>"; };
+		53007FA71AEA0565009CF393 /* 川AA662F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川AA662F.jpg"; sourceTree = "<group>"; };
+		53007FA81AEA0565009CF393 /* 川AEK882.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川AEK882.jpg"; sourceTree = "<group>"; };
+		53007FA91AEA0565009CF393 /* 川C28888.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川C28888.jpg"; sourceTree = "<group>"; };
+		53007FAA1AEA0565009CF393 /* 沪A51V39.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "沪A51V39.jpg"; sourceTree = "<group>"; };
+		53007FAB1AEA0565009CF393 /* 沪AGH092.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "沪AGH092.jpg"; sourceTree = "<group>"; };
+		53007FAC1AEA0565009CF393 /* 沪AP0910.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "沪AP0910.jpg"; sourceTree = "<group>"; };
+		53007FAD1AEA0565009CF393 /* 沪J32500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "沪J32500.jpg"; sourceTree = "<group>"; };
+		53007FAE1AEA0565009CF393 /* 沪K62933.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "沪K62933.jpg"; sourceTree = "<group>"; };
+		53007FAF1AEA0565009CF393 /* 津AHP676.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津AHP676.jpg"; sourceTree = "<group>"; };
+		53007FB01AEA0565009CF393 /* 津DTG667.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津DTG667.jpg"; sourceTree = "<group>"; };
+		53007FB11AEA0565009CF393 /* 津E14579.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津E14579.jpg"; sourceTree = "<group>"; };
+		53007FB21AEA0565009CF393 /* 津E22602.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津E22602.jpg"; sourceTree = "<group>"; };
+		53007FB31AEA0565009CF393 /* 津E24494.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津E24494.jpg"; sourceTree = "<group>"; };
+		53007FB41AEA0565009CF393 /* 津E28437.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津E28437.jpg"; sourceTree = "<group>"; };
+		53007FB51AEA0565009CF393 /* 津G68991.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津G68991.jpg"; sourceTree = "<group>"; };
+		53007FB61AEA0565009CF393 /* 津H65817.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津H65817.jpg"; sourceTree = "<group>"; };
+		53007FB71AEA0565009CF393 /* 津JZ3999.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津JZ3999.jpg"; sourceTree = "<group>"; };
+		53007FB81AEA0565009CF393 /* 津KNG518.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津KNG518.jpg"; sourceTree = "<group>"; };
+		53007FB91AEA0565009CF393 /* 津LS2999.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津LS2999.jpg"; sourceTree = "<group>"; };
+		53007FBA1AEA0565009CF393 /* 津MJY929.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津MJY929.jpg"; sourceTree = "<group>"; };
+		53007FBB1AEA0565009CF393 /* 津MN0888.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津MN0888.jpg"; sourceTree = "<group>"; };
+		53007FBC1AEA0565009CF393 /* 津NRL118.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津NRL118.jpg"; sourceTree = "<group>"; };
+		53007FBD1AEA0565009CF393 /* 津RB7992.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "津RB7992.jpg"; sourceTree = "<group>"; };
+		53007FBE1AEA0565009CF393 /* 浙A88888.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "浙A88888.jpg"; sourceTree = "<group>"; };
+		53007FBF1AEA0565009CF393 /* 浙B7C289.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "浙B7C289.jpg"; sourceTree = "<group>"; };
+		53007FC01AEA0565009CF393 /* 浙F397C0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "浙F397C0.jpg"; sourceTree = "<group>"; };
+		53007FC11AEA0565009CF393 /* 浙G70000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "浙G70000.jpg"; sourceTree = "<group>"; };
+		53007FC21AEA0565009CF393 /* 浙GZB388.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "浙GZB388.jpg"; sourceTree = "<group>"; };
+		53007FC31AEA0565009CF393 /* 浙GZJ021.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "浙GZJ021.jpg"; sourceTree = "<group>"; };
+		53007FC41AEA0565009CF393 /* 湘A05H22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A05H22.jpg"; sourceTree = "<group>"; };
+		53007FC51AEA0565009CF393 /* 湘A07G31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A07G31.jpg"; sourceTree = "<group>"; };
+		53007FC61AEA0565009CF393 /* 湘A0PC37.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A0PC37.jpg"; sourceTree = "<group>"; };
+		53007FC71AEA0565009CF393 /* 湘A0PQ76.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A0PQ76.jpg"; sourceTree = "<group>"; };
+		53007FC81AEA0565009CF393 /* 湘A2991D.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A2991D.jpg"; sourceTree = "<group>"; };
+		53007FC91AEA0565009CF393 /* 湘A31Y83.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A31Y83.jpg"; sourceTree = "<group>"; };
+		53007FCA1AEA0565009CF393 /* 湘A3685C.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A3685C.jpg"; sourceTree = "<group>"; };
+		53007FCB1AEA0565009CF393 /* 湘A3MA06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A3MA06.jpg"; sourceTree = "<group>"; };
+		53007FCC1AEA0565009CF393 /* 湘A53U19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A53U19.jpg"; sourceTree = "<group>"; };
+		53007FCD1AEA0565009CF393 /* 湘A5RM87.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A5RM87.jpg"; sourceTree = "<group>"; };
+		53007FCE1AEA0565009CF393 /* 湘A97971.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A97971.jpg"; sourceTree = "<group>"; };
+		53007FCF1AEA0565009CF393 /* 湘A9NU97.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A9NU97.jpg"; sourceTree = "<group>"; };
+		53007FD01AEA0565009CF393 /* 湘A9YU86.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘A9YU86.jpg"; sourceTree = "<group>"; };
+		53007FD11AEA0565009CF393 /* 湘AA8516.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘AA8516.jpg"; sourceTree = "<group>"; };
+		53007FD21AEA0565009CF393 /* 湘AED855.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘AED855.jpg"; sourceTree = "<group>"; };
+		53007FD31AEA0565009CF393 /* 湘AL8387.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘AL8387.jpg"; sourceTree = "<group>"; };
+		53007FD41AEA0566009CF393 /* 湘AT1Y68.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘AT1Y68.jpg"; sourceTree = "<group>"; };
+		53007FD51AEA0566009CF393 /* 湘AT3597.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘AT3597.jpg"; sourceTree = "<group>"; };
+		53007FD61AEA0566009CF393 /* 湘AT8781.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘AT8781.jpg"; sourceTree = "<group>"; };
+		53007FD71AEA0566009CF393 /* 湘ATL269.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘ATL269.jpg"; sourceTree = "<group>"; };
+		53007FD81AEA0566009CF393 /* 湘AYN355.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘AYN355.jpg"; sourceTree = "<group>"; };
+		53007FD91AEA0566009CF393 /* 湘G60009.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘G60009.jpg"; sourceTree = "<group>"; };
+		53007FDA1AEA0566009CF393 /* 湘GR0L16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "湘GR0L16.jpg"; sourceTree = "<group>"; };
+		53007FDB1AEA0566009CF393 /* 皖A00T45.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A00T45.jpg"; sourceTree = "<group>"; };
+		53007FDC1AEA0566009CF393 /* 皖A09T87.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A09T87.jpg"; sourceTree = "<group>"; };
+		53007FDD1AEA0566009CF393 /* 皖A1T235.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A1T235.jpg"; sourceTree = "<group>"; };
+		53007FDE1AEA0566009CF393 /* 皖A22T43.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A22T43.jpg"; sourceTree = "<group>"; };
+		53007FDF1AEA0566009CF393 /* 皖A2F56D.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A2F56D.jpg"; sourceTree = "<group>"; };
+		53007FE01AEA0566009CF393 /* 皖A45277.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A45277.jpg"; sourceTree = "<group>"; };
+		53007FE11AEA0566009CF393 /* 皖A80003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A80003.jpg"; sourceTree = "<group>"; };
+		53007FE21AEA0566009CF393 /* 皖A80375.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A80375.jpg"; sourceTree = "<group>"; };
+		53007FE31AEA0566009CF393 /* 皖A85501.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A85501.jpg"; sourceTree = "<group>"; };
+		53007FE41AEA0566009CF393 /* 皖A85890.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A85890.jpg"; sourceTree = "<group>"; };
+		53007FE51AEA0566009CF393 /* 皖A87271.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖A87271.jpg"; sourceTree = "<group>"; };
+		53007FE61AEA0566009CF393 /* 皖AA361D.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖AA361D.jpg"; sourceTree = "<group>"; };
+		53007FE71AEA0566009CF393 /* 皖AH8331.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖AH8331.jpg"; sourceTree = "<group>"; };
+		53007FE81AEA0566009CF393 /* 皖AJH155.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖AJH155.jpg"; sourceTree = "<group>"; };
+		53007FE91AEA0566009CF393 /* 皖AK169H.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖AK169H.jpg"; sourceTree = "<group>"; };
+		53007FEA1AEA0566009CF393 /* 皖AL025S.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖AL025S.jpg"; sourceTree = "<group>"; };
+		53007FEB1AEA0566009CF393 /* 皖AS3165.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖AS3165.jpg"; sourceTree = "<group>"; };
+		53007FEC1AEA0566009CF393 /* 皖AT789S.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖AT789S.jpg"; sourceTree = "<group>"; };
+		53007FED1AEA0566009CF393 /* 皖ATH859.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖ATH859.jpg"; sourceTree = "<group>"; };
+		53007FEE1AEA0566009CF393 /* 皖AUB816.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖AUB816.jpg"; sourceTree = "<group>"; };
+		53007FEF1AEA0566009CF393 /* 皖AX688A.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖AX688A.jpg"; sourceTree = "<group>"; };
+		53007FF01AEA0566009CF393 /* 皖BBC666.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖BBC666.jpg"; sourceTree = "<group>"; };
+		53007FF11AEA0566009CF393 /* 皖EZM618.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖EZM618.jpg"; sourceTree = "<group>"; };
+		53007FF21AEA0566009CF393 /* 皖F71646.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖F71646.jpg"; sourceTree = "<group>"; };
+		53007FF31AEA0566009CF393 /* 皖M12288.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖M12288.jpg"; sourceTree = "<group>"; };
+		53007FF41AEA0566009CF393 /* 皖M69311.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖M69311.jpg"; sourceTree = "<group>"; };
+		53007FF51AEA0566009CF393 /* 皖P77222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖P77222.jpg"; sourceTree = "<group>"; };
+		53007FF61AEA0566009CF393 /* 皖Q06417.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖Q06417.jpg"; sourceTree = "<group>"; };
+		53007FF71AEA0566009CF393 /* 皖Q0686学.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖Q0686学.jpg"; sourceTree = "<group>"; };
+		53007FF81AEA0566009CF393 /* 皖Q18632.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖Q18632.jpg"; sourceTree = "<group>"; };
+		53007FF91AEA0566009CF393 /* 皖Q19917.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖Q19917.jpg"; sourceTree = "<group>"; };
+		53007FFA1AEA0566009CF393 /* 皖Q80197.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖Q80197.jpg"; sourceTree = "<group>"; };
+		53007FFB1AEA0566009CF393 /* 皖QA2825.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "皖QA2825.jpg"; sourceTree = "<group>"; };
+		53007FFC1AEA0566009CF393 /* 粤B0K999.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "粤B0K999.jpg"; sourceTree = "<group>"; };
+		53007FFD1AEA0566009CF393 /* 苏A0CP56.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "苏A0CP56.jpg"; sourceTree = "<group>"; };
+		53007FFE1AEA0566009CF393 /* 苏A6E176.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "苏A6E176.jpg"; sourceTree = "<group>"; };
+		53007FFF1AEA0566009CF393 /* 苏B551QV.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "苏B551QV.jpg"; sourceTree = "<group>"; };
+		530080001AEA0566009CF393 /* 苏B577CU.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "苏B577CU.jpg"; sourceTree = "<group>"; };
+		530080011AEA0566009CF393 /* 苏BGG522.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "苏BGG522.jpg"; sourceTree = "<group>"; };
+		530080021AEA0566009CF393 /* 苏BU5838.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "苏BU5838.jpg"; sourceTree = "<group>"; };
+		530080031AEA0566009CF393 /* 苏DLA031.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "苏DLA031.jpg"; sourceTree = "<group>"; };
+		530080041AEA0566009CF393 /* 苏E2Y256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "苏E2Y256.jpg"; sourceTree = "<group>"; };
+		530080051AEA0566009CF393 /* 豫K91239.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "豫K91239.jpg"; sourceTree = "<group>"; };
+		530080061AEA0566009CF393 /* 豫S33909.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "豫S33909.jpg"; sourceTree = "<group>"; };
+		530080071AEA0566009CF393 /* 赣A82F36.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "赣A82F36.jpg"; sourceTree = "<group>"; };
+		530080081AEA0566009CF393 /* 赣A88888.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "赣A88888.jpg"; sourceTree = "<group>"; };
+		530080091AEA0566009CF393 /* 辽B99999.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "辽B99999.jpg"; sourceTree = "<group>"; };
+		5300800A1AEA0566009CF393 /* 辽BMW005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "辽BMW005.jpg"; sourceTree = "<group>"; };
+		5300800B1AEA0566009CF393 /* 辽C33333.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "辽C33333.jpg"; sourceTree = "<group>"; };
+		5300800C1AEA0566009CF393 /* 辽PE9218.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "辽PE9218.jpg"; sourceTree = "<group>"; };
+		5300800D1AEA0566009CF393 /* 闽HB1508.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "闽HB1508.jpg"; sourceTree = "<group>"; };
+		5300800E1AEA0566009CF393 /* 鲁A88888.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "鲁A88888.jpg"; sourceTree = "<group>"; };
+		5300800F1AEA0566009CF393 /* 鲁B995EQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "鲁B995EQ.jpg"; sourceTree = "<group>"; };
+		530080101AEA0566009CF393 /* 鲁BQG527.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "鲁BQG527.jpg"; sourceTree = "<group>"; };
+		530080111AEA0566009CF393 /* 鲁JRW350.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "鲁JRW350.jpg"; sourceTree = "<group>"; };
+		530080121AEA0566009CF393 /* 鲁KK5555.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "鲁KK5555.jpg"; sourceTree = "<group>"; };
+		530080131AEA0566009CF393 /* 鲁LD9016.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "鲁LD9016.jpg"; sourceTree = "<group>"; };
+		530080141AEA0566009CF393 /* 鲁Y44748.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "鲁Y44748.jpg"; sourceTree = "<group>"; };
+		530080151AEA0566009CF393 /* 黑A16341.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "黑A16341.jpg"; sourceTree = "<group>"; };
+		530080161AEA0566009CF393 /* 黑A1R272.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "黑A1R272.jpg"; sourceTree = "<group>"; };
+		530080171AEA0566009CF393 /* 黑AB4444.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "黑AB4444.jpg"; sourceTree = "<group>"; };
+		530080191AEA0566009CF393 /* 京H99999.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "京H99999.jpg"; sourceTree = "<group>"; };
+		5300801A1AEA0566009CF393 /* plate_detect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plate_detect.jpg; sourceTree = "<group>"; };
+		5300801B1AEA0566009CF393 /* plate_judge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plate_judge.jpg; sourceTree = "<group>"; };
+		5300801C1AEA0566009CF393 /* plate_locate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plate_locate.jpg; sourceTree = "<group>"; };
+		5300801D1AEA0566009CF393 /* plate_recognize.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plate_recognize.jpg; sourceTree = "<group>"; };
+		5300801E1AEA0566009CF393 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		5300801F1AEA0566009CF393 /* 使用说明.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "使用说明.txt"; sourceTree = "<group>"; };
+		530080201AEA1655009CF393 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		5352385A1AE7E7560023BB4E /* CParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CParser.cpp; sourceTree = "<group>"; };
 		5352385B1AE7E7560023BB4E /* deface.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = deface.cpp; sourceTree = "<group>"; };
 		5352385C1AE7E7560023BB4E /* general_test_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = general_test_prepare.cpp; sourceTree = "<group>"; };
 		5352385D1AE7E7560023BB4E /* generate_gdts.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = generate_gdts.cpp; sourceTree = "<group>"; };
 		5352385E1AE7E7560023BB4E /* learn_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = learn_prepare.cpp; sourceTree = "<group>"; };
-		5352385F1AE7E7560023BB4E /* mc_data_prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 2147486000; lastKnownFileType = sourcecode.cpp.cpp; path = mc_data_prepare.cpp; sourceTree = "<group>"; };
-		535238601AE7E7560023BB4E /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 2147484705; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		5385254B1AEC7E6000A64278 /* chars_identify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_identify.h; sourceTree = "<group>"; };
+		5385254C1AEC7E6000A64278 /* chars_recognise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_recognise.h; sourceTree = "<group>"; };
+		5385254D1AEC7E6000A64278 /* chars_segment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_segment.h; sourceTree = "<group>"; };
+		5385254E1AEC7E6000A64278 /* core_func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core_func.h; sourceTree = "<group>"; };
+		5385254F1AEC7E6000A64278 /* CParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CParser.h; sourceTree = "<group>"; };
+		538525501AEC7E6000A64278 /* feature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feature.h; sourceTree = "<group>"; };
+		538525511AEC7E6000A64278 /* plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate.h; sourceTree = "<group>"; };
+		538525521AEC7E6000A64278 /* plate_detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_detect.h; sourceTree = "<group>"; };
+		538525531AEC7E6000A64278 /* plate_judge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_judge.h; sourceTree = "<group>"; };
+		538525541AEC7E6000A64278 /* plate_locate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_locate.h; sourceTree = "<group>"; };
+		538525551AEC7E6000A64278 /* plate_recognize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plate_recognize.h; sourceTree = "<group>"; };
+		538525561AEC7E6000A64278 /* prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prep.h; sourceTree = "<group>"; };
+		538525571AEC7E6000A64278 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		5385255A1AEC809000A64278 /* ann_train.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ann_train.cpp; sourceTree = "<group>"; };
+		5385255C1AEC80C300A64278 /* svm_train.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = svm_train.cpp; sourceTree = "<group>"; };
 		53E6E8CF1A7748F80044931C /* EasyPR */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EasyPR; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EBCDEF1A7B593A002F67C1 /* libopencv_calib3d.2.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_calib3d.2.4.8.dylib; sourceTree = "<group>"; };
 		53EBCDF01A7B593A002F67C1 /* libopencv_contrib.2.4.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_contrib.2.4.8.dylib; sourceTree = "<group>"; };
@@ -121,6 +254,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530080211AEA1655009CF393 /* CoreFoundation.framework in Frameworks */,
 				53EBCE081A7B593A002F67C1 /* libopencv_legacy.2.4.8.dylib in Frameworks */,
 				53EBCE061A7B593A002F67C1 /* libopencv_highgui.2.4.8.dylib in Frameworks */,
 				53EBCE0E1A7B593A002F67C1 /* libopencv_superres.2.4.8.dylib in Frameworks */,
@@ -144,12 +278,166 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53007F9A1AEA0565009CF393 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				53007F9B1AEA0565009CF393 /* chars_identify.jpg */,
+				53007F9C1AEA0565009CF393 /* chars_recognise.jpg */,
+				53007F9D1AEA0565009CF393 /* chars_segment.jpg */,
+				53007F9E1AEA0565009CF393 /* GDSL.txt */,
+				53007F9F1AEA0565009CF393 /* general_test */,
+				530080181AEA0566009CF393 /* native_test */,
+				5300801A1AEA0566009CF393 /* plate_detect.jpg */,
+				5300801B1AEA0566009CF393 /* plate_judge.jpg */,
+				5300801C1AEA0566009CF393 /* plate_locate.jpg */,
+				5300801D1AEA0566009CF393 /* plate_recognize.jpg */,
+				5300801E1AEA0566009CF393 /* test.jpg */,
+				5300801F1AEA0566009CF393 /* 使用说明.txt */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		53007F9F1AEA0565009CF393 /* general_test */ = {
+			isa = PBXGroup;
+			children = (
+				53007FA01AEA0565009CF393 /* 京A88731.jpg */,
+				53007FA11AEA0565009CF393 /* 京CX8888.jpg */,
+				53007FA21AEA0565009CF393 /* 京H99999.jpg */,
+				53007FA31AEA0565009CF393 /* 冀FA3215.jpg */,
+				53007FA41AEA0565009CF393 /* 川A019W2.jpg */,
+				53007FA51AEA0565009CF393 /* 川A09X20.jpg */,
+				53007FA61AEA0565009CF393 /* 川A82M83.jpg */,
+				53007FA71AEA0565009CF393 /* 川AA662F.jpg */,
+				53007FA81AEA0565009CF393 /* 川AEK882.jpg */,
+				53007FA91AEA0565009CF393 /* 川C28888.jpg */,
+				53007FAA1AEA0565009CF393 /* 沪A51V39.jpg */,
+				53007FAB1AEA0565009CF393 /* 沪AGH092.jpg */,
+				53007FAC1AEA0565009CF393 /* 沪AP0910.jpg */,
+				53007FAD1AEA0565009CF393 /* 沪J32500.jpg */,
+				53007FAE1AEA0565009CF393 /* 沪K62933.jpg */,
+				53007FAF1AEA0565009CF393 /* 津AHP676.jpg */,
+				53007FB01AEA0565009CF393 /* 津DTG667.jpg */,
+				53007FB11AEA0565009CF393 /* 津E14579.jpg */,
+				53007FB21AEA0565009CF393 /* 津E22602.jpg */,
+				53007FB31AEA0565009CF393 /* 津E24494.jpg */,
+				53007FB41AEA0565009CF393 /* 津E28437.jpg */,
+				53007FB51AEA0565009CF393 /* 津G68991.jpg */,
+				53007FB61AEA0565009CF393 /* 津H65817.jpg */,
+				53007FB71AEA0565009CF393 /* 津JZ3999.jpg */,
+				53007FB81AEA0565009CF393 /* 津KNG518.jpg */,
+				53007FB91AEA0565009CF393 /* 津LS2999.jpg */,
+				53007FBA1AEA0565009CF393 /* 津MJY929.jpg */,
+				53007FBB1AEA0565009CF393 /* 津MN0888.jpg */,
+				53007FBC1AEA0565009CF393 /* 津NRL118.jpg */,
+				53007FBD1AEA0565009CF393 /* 津RB7992.jpg */,
+				53007FBE1AEA0565009CF393 /* 浙A88888.jpg */,
+				53007FBF1AEA0565009CF393 /* 浙B7C289.jpg */,
+				53007FC01AEA0565009CF393 /* 浙F397C0.jpg */,
+				53007FC11AEA0565009CF393 /* 浙G70000.jpg */,
+				53007FC21AEA0565009CF393 /* 浙GZB388.jpg */,
+				53007FC31AEA0565009CF393 /* 浙GZJ021.jpg */,
+				53007FC41AEA0565009CF393 /* 湘A05H22.jpg */,
+				53007FC51AEA0565009CF393 /* 湘A07G31.jpg */,
+				53007FC61AEA0565009CF393 /* 湘A0PC37.jpg */,
+				53007FC71AEA0565009CF393 /* 湘A0PQ76.jpg */,
+				53007FC81AEA0565009CF393 /* 湘A2991D.jpg */,
+				53007FC91AEA0565009CF393 /* 湘A31Y83.jpg */,
+				53007FCA1AEA0565009CF393 /* 湘A3685C.jpg */,
+				53007FCB1AEA0565009CF393 /* 湘A3MA06.jpg */,
+				53007FCC1AEA0565009CF393 /* 湘A53U19.jpg */,
+				53007FCD1AEA0565009CF393 /* 湘A5RM87.jpg */,
+				53007FCE1AEA0565009CF393 /* 湘A97971.jpg */,
+				53007FCF1AEA0565009CF393 /* 湘A9NU97.jpg */,
+				53007FD01AEA0565009CF393 /* 湘A9YU86.jpg */,
+				53007FD11AEA0565009CF393 /* 湘AA8516.jpg */,
+				53007FD21AEA0565009CF393 /* 湘AED855.jpg */,
+				53007FD31AEA0565009CF393 /* 湘AL8387.jpg */,
+				53007FD41AEA0566009CF393 /* 湘AT1Y68.jpg */,
+				53007FD51AEA0566009CF393 /* 湘AT3597.jpg */,
+				53007FD61AEA0566009CF393 /* 湘AT8781.jpg */,
+				53007FD71AEA0566009CF393 /* 湘ATL269.jpg */,
+				53007FD81AEA0566009CF393 /* 湘AYN355.jpg */,
+				53007FD91AEA0566009CF393 /* 湘G60009.jpg */,
+				53007FDA1AEA0566009CF393 /* 湘GR0L16.jpg */,
+				53007FDB1AEA0566009CF393 /* 皖A00T45.jpg */,
+				53007FDC1AEA0566009CF393 /* 皖A09T87.jpg */,
+				53007FDD1AEA0566009CF393 /* 皖A1T235.jpg */,
+				53007FDE1AEA0566009CF393 /* 皖A22T43.jpg */,
+				53007FDF1AEA0566009CF393 /* 皖A2F56D.jpg */,
+				53007FE01AEA0566009CF393 /* 皖A45277.jpg */,
+				53007FE11AEA0566009CF393 /* 皖A80003.jpg */,
+				53007FE21AEA0566009CF393 /* 皖A80375.jpg */,
+				53007FE31AEA0566009CF393 /* 皖A85501.jpg */,
+				53007FE41AEA0566009CF393 /* 皖A85890.jpg */,
+				53007FE51AEA0566009CF393 /* 皖A87271.jpg */,
+				53007FE61AEA0566009CF393 /* 皖AA361D.jpg */,
+				53007FE71AEA0566009CF393 /* 皖AH8331.jpg */,
+				53007FE81AEA0566009CF393 /* 皖AJH155.jpg */,
+				53007FE91AEA0566009CF393 /* 皖AK169H.jpg */,
+				53007FEA1AEA0566009CF393 /* 皖AL025S.jpg */,
+				53007FEB1AEA0566009CF393 /* 皖AS3165.jpg */,
+				53007FEC1AEA0566009CF393 /* 皖AT789S.jpg */,
+				53007FED1AEA0566009CF393 /* 皖ATH859.jpg */,
+				53007FEE1AEA0566009CF393 /* 皖AUB816.jpg */,
+				53007FEF1AEA0566009CF393 /* 皖AX688A.jpg */,
+				53007FF01AEA0566009CF393 /* 皖BBC666.jpg */,
+				53007FF11AEA0566009CF393 /* 皖EZM618.jpg */,
+				53007FF21AEA0566009CF393 /* 皖F71646.jpg */,
+				53007FF31AEA0566009CF393 /* 皖M12288.jpg */,
+				53007FF41AEA0566009CF393 /* 皖M69311.jpg */,
+				53007FF51AEA0566009CF393 /* 皖P77222.jpg */,
+				53007FF61AEA0566009CF393 /* 皖Q06417.jpg */,
+				53007FF71AEA0566009CF393 /* 皖Q0686学.jpg */,
+				53007FF81AEA0566009CF393 /* 皖Q18632.jpg */,
+				53007FF91AEA0566009CF393 /* 皖Q19917.jpg */,
+				53007FFA1AEA0566009CF393 /* 皖Q80197.jpg */,
+				53007FFB1AEA0566009CF393 /* 皖QA2825.jpg */,
+				53007FFC1AEA0566009CF393 /* 粤B0K999.jpg */,
+				53007FFD1AEA0566009CF393 /* 苏A0CP56.jpg */,
+				53007FFE1AEA0566009CF393 /* 苏A6E176.jpg */,
+				53007FFF1AEA0566009CF393 /* 苏B551QV.jpg */,
+				530080001AEA0566009CF393 /* 苏B577CU.jpg */,
+				530080011AEA0566009CF393 /* 苏BGG522.jpg */,
+				530080021AEA0566009CF393 /* 苏BU5838.jpg */,
+				530080031AEA0566009CF393 /* 苏DLA031.jpg */,
+				530080041AEA0566009CF393 /* 苏E2Y256.jpg */,
+				530080051AEA0566009CF393 /* 豫K91239.jpg */,
+				530080061AEA0566009CF393 /* 豫S33909.jpg */,
+				530080071AEA0566009CF393 /* 赣A82F36.jpg */,
+				530080081AEA0566009CF393 /* 赣A88888.jpg */,
+				530080091AEA0566009CF393 /* 辽B99999.jpg */,
+				5300800A1AEA0566009CF393 /* 辽BMW005.jpg */,
+				5300800B1AEA0566009CF393 /* 辽C33333.jpg */,
+				5300800C1AEA0566009CF393 /* 辽PE9218.jpg */,
+				5300800D1AEA0566009CF393 /* 闽HB1508.jpg */,
+				5300800E1AEA0566009CF393 /* 鲁A88888.jpg */,
+				5300800F1AEA0566009CF393 /* 鲁B995EQ.jpg */,
+				530080101AEA0566009CF393 /* 鲁BQG527.jpg */,
+				530080111AEA0566009CF393 /* 鲁JRW350.jpg */,
+				530080121AEA0566009CF393 /* 鲁KK5555.jpg */,
+				530080131AEA0566009CF393 /* 鲁LD9016.jpg */,
+				530080141AEA0566009CF393 /* 鲁Y44748.jpg */,
+				530080151AEA0566009CF393 /* 黑A16341.jpg */,
+				530080161AEA0566009CF393 /* 黑A1R272.jpg */,
+				530080171AEA0566009CF393 /* 黑AB4444.jpg */,
+			);
+			path = general_test;
+			sourceTree = "<group>";
+		};
+		530080181AEA0566009CF393 /* native_test */ = {
+			isa = PBXGroup;
+			children = (
+				530080191AEA0566009CF393 /* 京H99999.jpg */,
+			);
+			path = native_test;
+			sourceTree = "<group>";
+		};
 		535238381AE7E7550023BB4E /* src */ = {
 			isa = PBXGroup;
 			children = (
 				535238391AE7E7550023BB4E /* core */,
 				535238441AE7E7550023BB4E /* include */,
-				535238521AE7E7550023BB4E /* main.cpp */,
+				53007F981AE9FE6E009CF393 /* main.cpp */,
 				535238531AE7E7550023BB4E /* test */,
 				535238561AE7E7560023BB4E /* train */,
 				535238591AE7E7560023BB4E /* util */,
@@ -160,16 +448,16 @@
 		535238391AE7E7550023BB4E /* core */ = {
 			isa = PBXGroup;
 			children = (
-				5352383A1AE7E7550023BB4E /* chars_identify.cpp */,
-				5352383B1AE7E7550023BB4E /* chars_recognise.cpp */,
-				5352383C1AE7E7550023BB4E /* chars_segment.cpp */,
-				5352383D1AE7E7550023BB4E /* core_func.cpp */,
-				5352383E1AE7E7550023BB4E /* feature.cpp */,
-				5352383F1AE7E7550023BB4E /* plate.cpp */,
-				535238401AE7E7550023BB4E /* plate_detect.cpp */,
-				535238411AE7E7550023BB4E /* plate_judge.cpp */,
-				535238421AE7E7550023BB4E /* plate_locate.cpp */,
-				535238431AE7E7550023BB4E /* plate_recognize.cpp */,
+				53007F911AE9DCC0009CF393 /* plate_recognize.cpp */,
+				53007F7F1AE9DB3C009CF393 /* chars_recognise.cpp */,
+				53007F801AE9DB3C009CF393 /* chars_segment.cpp */,
+				53007F811AE9DB3C009CF393 /* core_func.cpp */,
+				53007F821AE9DB3C009CF393 /* feature.cpp */,
+				53007F831AE9DB3C009CF393 /* plate.cpp */,
+				53007F841AE9DB3C009CF393 /* plate_detect.cpp */,
+				53007F851AE9DB3C009CF393 /* plate_judge.cpp */,
+				53007F861AE9DB3C009CF393 /* plate_locate.cpp */,
+				53007F871AE9DB3C009CF393 /* chars_identify.cpp */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -177,19 +465,19 @@
 		535238441AE7E7550023BB4E /* include */ = {
 			isa = PBXGroup;
 			children = (
-				535238451AE7E7550023BB4E /* chars_identify.h */,
-				535238461AE7E7550023BB4E /* chars_recognise.h */,
-				535238471AE7E7550023BB4E /* chars_segment.h */,
-				535238481AE7E7550023BB4E /* core_func.h */,
-				535238491AE7E7550023BB4E /* CParser.h */,
-				5352384A1AE7E7550023BB4E /* feature.h */,
-				5352384B1AE7E7550023BB4E /* plate.h */,
-				5352384C1AE7E7550023BB4E /* plate_detect.h */,
-				5352384D1AE7E7550023BB4E /* plate_judge.h */,
-				5352384E1AE7E7550023BB4E /* plate_locate.h */,
-				5352384F1AE7E7550023BB4E /* plate_recognize.h */,
-				535238501AE7E7550023BB4E /* prep.h */,
-				535238511AE7E7550023BB4E /* util.h */,
+				5385254B1AEC7E6000A64278 /* chars_identify.h */,
+				5385254C1AEC7E6000A64278 /* chars_recognise.h */,
+				5385254D1AEC7E6000A64278 /* chars_segment.h */,
+				5385254E1AEC7E6000A64278 /* core_func.h */,
+				5385254F1AEC7E6000A64278 /* CParser.h */,
+				538525501AEC7E6000A64278 /* feature.h */,
+				538525511AEC7E6000A64278 /* plate.h */,
+				538525521AEC7E6000A64278 /* plate_detect.h */,
+				538525531AEC7E6000A64278 /* plate_judge.h */,
+				538525541AEC7E6000A64278 /* plate_locate.h */,
+				538525551AEC7E6000A64278 /* plate_recognize.h */,
+				538525561AEC7E6000A64278 /* prep.h */,
+				538525571AEC7E6000A64278 /* util.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -197,8 +485,8 @@
 		535238531AE7E7550023BB4E /* test */ = {
 			isa = PBXGroup;
 			children = (
-				535238541AE7E7560023BB4E /* accuracy_test.cpp */,
-				535238551AE7E7560023BB4E /* test.cpp */,
+				53007F7A1AE9D908009CF393 /* test.cpp */,
+				53007F7D1AE9DA13009CF393 /* accuracy_test.cpp */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -206,8 +494,8 @@
 		535238561AE7E7560023BB4E /* train */ = {
 			isa = PBXGroup;
 			children = (
-				535238571AE7E7560023BB4E /* ann_train.cpp */,
-				535238581AE7E7560023BB4E /* svm_train.cpp */,
+				5385255C1AEC80C300A64278 /* svm_train.cpp */,
+				5385255A1AEC809000A64278 /* ann_train.cpp */,
 			);
 			path = train;
 			sourceTree = "<group>";
@@ -220,8 +508,8 @@
 				5352385C1AE7E7560023BB4E /* general_test_prepare.cpp */,
 				5352385D1AE7E7560023BB4E /* generate_gdts.cpp */,
 				5352385E1AE7E7560023BB4E /* learn_prepare.cpp */,
-				5352385F1AE7E7560023BB4E /* mc_data_prepare.cpp */,
-				535238601AE7E7560023BB4E /* util.cpp */,
+				53007F961AE9DD53009CF393 /* mc_data_prepare.cpp */,
+				53007F931AE9DD1C009CF393 /* util.cpp */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -229,6 +517,8 @@
 		53E6E8C61A7748F80044931C = {
 			isa = PBXGroup;
 			children = (
+				530080201AEA1655009CF393 /* CoreFoundation.framework */,
+				53007F9A1AEA0565009CF393 /* image */,
 				535238381AE7E7550023BB4E /* src */,
 				53EBCDEE1A7B593A002F67C1 /* lib */,
 				53E6E8D11A7748F80044931C /* EasyPR */,
@@ -333,27 +623,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				535238731AE7E7560023BB4E /* generate_gdts.cpp in Sources */,
-				5352386E1AE7E7560023BB4E /* ann_train.cpp in Sources */,
-				535238631AE7E7560023BB4E /* chars_segment.cpp in Sources */,
-				535238611AE7E7560023BB4E /* chars_identify.cpp in Sources */,
-				535238661AE7E7560023BB4E /* plate.cpp in Sources */,
-				535238651AE7E7560023BB4E /* feature.cpp in Sources */,
+				53007F971AE9DD53009CF393 /* mc_data_prepare.cpp in Sources */,
+				53007F7C1AE9D908009CF393 /* test.cpp in Sources */,
+				53007F991AE9FE6E009CF393 /* main.cpp in Sources */,
+				53007F7E1AE9DA13009CF393 /* accuracy_test.cpp in Sources */,
+				53007F8E1AE9DB3C009CF393 /* plate_judge.cpp in Sources */,
+				5385255D1AEC80C300A64278 /* svm_train.cpp in Sources */,
 				535238741AE7E7560023BB4E /* learn_prepare.cpp in Sources */,
-				5352386C1AE7E7560023BB4E /* accuracy_test.cpp in Sources */,
-				5352386B1AE7E7560023BB4E /* main.cpp in Sources */,
-				535238681AE7E7560023BB4E /* plate_judge.cpp in Sources */,
-				535238641AE7E7560023BB4E /* core_func.cpp in Sources */,
-				535238621AE7E7560023BB4E /* chars_recognise.cpp in Sources */,
+				5385255B1AEC809000A64278 /* ann_train.cpp in Sources */,
+				53007F921AE9DCC0009CF393 /* plate_recognize.cpp in Sources */,
+				53007F8B1AE9DB3C009CF393 /* feature.cpp in Sources */,
+				53007F951AE9DD1C009CF393 /* util.cpp in Sources */,
+				53007F881AE9DB3C009CF393 /* chars_recognise.cpp in Sources */,
 				535238721AE7E7560023BB4E /* general_test_prepare.cpp in Sources */,
-				5352386D1AE7E7560023BB4E /* test.cpp in Sources */,
-				535238691AE7E7560023BB4E /* plate_locate.cpp in Sources */,
-				535238761AE7E7560023BB4E /* util.cpp in Sources */,
+				53007F901AE9DB3C009CF393 /* chars_identify.cpp in Sources */,
 				535238701AE7E7560023BB4E /* CParser.cpp in Sources */,
-				535238671AE7E7560023BB4E /* plate_detect.cpp in Sources */,
-				535238751AE7E7560023BB4E /* mc_data_prepare.cpp in Sources */,
-				5352386F1AE7E7560023BB4E /* svm_train.cpp in Sources */,
+				53007F8C1AE9DB3C009CF393 /* plate.cpp in Sources */,
+				53007F8A1AE9DB3C009CF393 /* core_func.cpp in Sources */,
+				53007F8D1AE9DB3C009CF393 /* plate_detect.cpp in Sources */,
 				535238711AE7E7560023BB4E /* deface.cpp in Sources */,
-				5352386A1AE7E7560023BB4E /* plate_recognize.cpp in Sources */,
+				53007F891AE9DB3C009CF393 /* chars_segment.cpp in Sources */,
+				53007F8F1AE9DB3C009CF393 /* plate_locate.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +687,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
 			};
 			name = Debug;
 		};
@@ -431,30 +722,39 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
 			};
 			name = Release;
 		};
 		53E6E8D71A7748F80044931C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/opencv/include\"",
 					"\"$(SRCROOT)\"",
 				);
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "\"$(SRCROOT)/\"";
+				LD_RUNPATH_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/opencv/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/image\"";
 			};
 			name = Debug;
 		};
 		53E6E8D81A7748F80044931C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/opencv/include\"",
 					"\"$(SRCROOT)\"",
 				);
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "\"$(SRCROOT)/\"";
+				LD_RUNPATH_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/opencv/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/image\"";
 			};
 			name = Release;
 		};

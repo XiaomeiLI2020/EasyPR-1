@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>1E21FE40-D19F-4DDC-8774-777439F14CE9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>EasyPR</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F1A85CC89E8F997FCBB9E3BC1B3DD212F5FF9A7B</key>
 		<string>github.com:zhoushiwei/EasyPR.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>EasyPR.xcodeproj</string>
+	<string>EasyPR.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F1A85CC89E8F997FCBB9E3BC1B3DD212F5FF9A7B</key>
